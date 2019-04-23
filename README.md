@@ -1,2 +1,2 @@
-[![CircleCI](https://circleci.com/gh/valenstical/ireporter-react/tree/staging.svg?style=svg)](https://circleci.com/gh/valenstical/ireporter-react/tree/staging)
+[![CircleCI](https://circleci.com/gh/valenstical/ireporter-react/tree/staging.svg?style=svg)](https://circleci.com/gh/valenstical/ireporter-react/tree/staging) [![Maintainability](https://api.codeclimate.com/v1/badges/9d9c1523a2953beacff7/maintainability)](https://codeclimate.com/github/valenstical/ireporter-react/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/9d9c1523a2953beacff7/test_coverage)](https://codeclimate.com/github/valenstical/ireporter-react/test_coverage)
 # ireporter-react

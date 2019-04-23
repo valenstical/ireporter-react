@@ -3,6 +3,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 
 import initialState from './initialState';
+import rootReducer from '../reducers';
 
 /**
  * @constant store - created store

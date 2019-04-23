@@ -1,5 +1,3 @@
-const initialState = {
-
+export default {
+  dummy: {}
 };
-
-export default initialState;

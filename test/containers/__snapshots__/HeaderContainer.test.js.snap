@@ -1,0 +1,132 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EditProfileContainer> should render without crashing 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <HeaderContainer>
+        <Header>
+          <nav
+            className="navigation"
+          >
+            <div
+              className="wrapper"
+            >
+              <div
+                className="clear-float"
+              >
+                <Link
+                  className="nav-brand text-brand float-left"
+                  replace={false}
+                  to="/"
+                >
+                  <a
+                    className="nav-brand text-brand float-left"
+                    href="/"
+                    onClick={[Function]}
+                  >
+                    iReporter
+                  </a>
+                </Link>
+                <ul
+                  className="nav-section float-right nav-shown nav-hidden transition"
+                  id="nav-section"
+                >
+                  <li
+                    data-pg-name="Nav Item"
+                  >
+                    <Link
+                      replace={false}
+                      to="/"
+                    >
+                      <a
+                        href="/"
+                        onClick={[Function]}
+                      >
+                        Home
+                      </a>
+                    </Link>
+                  </li>
+                  <li
+                    data-pg-name="Nav Item"
+                  >
+                    <Link
+                      replace={false}
+                      to="/sign-in"
+                    >
+                      <a
+                        href="/sign-in"
+                        onClick={[Function]}
+                      >
+                        Sign in
+                      </a>
+                    </Link>
+                  </li>
+                  <li
+                    className="btn-cta"
+                    data-pg-name="Nav Item"
+                  >
+                    <Link
+                      className="btn-brand transition"
+                      replace={false}
+                      to="/sign-up"
+                    >
+                      <a
+                        className="btn-brand transition"
+                        href="/sign-up"
+                        onClick={[Function]}
+                      >
+                        Report a case
+                      </a>
+                    </Link>
+                  </li>
+                </ul>
+                <button
+                  className="menu-bar"
+                  type="button"
+                >
+                  <i
+                    className="fa fa-align-justify"
+                  />
+                </button>
+              </div>
+            </div>
+          </nav>
+        </Header>
+      </HeaderContainer>
+    </Router>
+  </BrowserRouter>
+</Provider>
+`;

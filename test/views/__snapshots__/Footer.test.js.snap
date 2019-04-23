@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer> should render without crashing 1`] = `
+<footer
+  className="footer"
+>
+  <div
+    className="wrapper"
+  >
+    <p
+      className="float-right"
+    >
+      <Link
+        replace={false}
+        to="#"
+      >
+        Terms & Conditions
+      </Link>
+      <Link
+        replace={false}
+        to="#"
+      >
+        Privacy Policy
+      </Link>
+    </p>
+    <p
+      className="float-left"
+    >
+      © 2019 iReporter.
+    </p>
+  </div>
+</footer>
+`;

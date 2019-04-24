@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+/**
+ * The landing page component
+ * @returns {object} The generated JSX object
+ */
 export default function Landing() {
   return (
     <>

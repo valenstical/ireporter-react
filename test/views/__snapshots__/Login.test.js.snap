@@ -1,0 +1,300 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Login> should render without crashing on startup 1`] = `
+<section
+  className="how login-wrapper bg-grey top-space"
+  data-pg-name="How it Works"
+>
+  <div
+    className="wrapper"
+    data-pg-name="Wrapper"
+  >
+    <form
+      className="card login-form"
+      noValidate={true}
+      onSubmit={[MockFunction]}
+    >
+      <header
+        className="form-header"
+      >
+        <h1
+          className="text-brand"
+        >
+          Welcome Back
+        </h1>
+        <p>
+          Sign in to start reporting...
+        </p>
+      </header>
+      <div
+        className="form-wrapper"
+      >
+        <label
+          htmlFor="username"
+        >
+          Username, Email or Phone number
+        </label>
+        <input
+          className="form-element"
+          id="username"
+          name="username"
+          required={true}
+          type="text"
+        />
+      </div>
+      <div
+        className="form-wrapper"
+      >
+        <label
+          htmlFor="forgotPassword"
+        >
+          Password
+        </label>
+        <Link
+          className="forgot-password transition"
+          replace={false}
+          to="#"
+        >
+          Forgot Password?
+        </Link>
+        <input
+          autoComplete="off"
+          className="form-element"
+          id="forgotPassword"
+          name="password"
+          required={true}
+          type="password"
+        />
+      </div>
+      <button
+        className="btn-brand btn-submit"
+        disabled={false}
+        type="submit"
+      >
+        <span>
+          Sign In 
+        </span>
+      </button>
+    </form>
+    <p
+      className="login-register-link"
+    >
+      New to iReporter?
+       
+      <Link
+        replace={false}
+        to="/sign-up"
+      >
+        Register here
+      </Link>
+    </p>
+  </div>
+</section>
+`;
+
+exports[`<Login> should render without crashing when login failed 1`] = `
+<section
+  className="how login-wrapper bg-grey top-space"
+  data-pg-name="How it Works"
+>
+  <div
+    className="wrapper"
+    data-pg-name="Wrapper"
+  >
+    <form
+      className="card login-form"
+      noValidate={true}
+      onSubmit={[MockFunction]}
+    >
+      <header
+        className="form-header"
+      >
+        <h1
+          className="text-brand"
+        >
+          Welcome Back
+        </h1>
+        <p>
+          Sign in to start reporting...
+        </p>
+      </header>
+      <Alert
+        message={
+          Array [
+            "failed",
+          ]
+        }
+        success={false}
+        title="Login Failed!"
+      />
+      <div
+        className="form-wrapper"
+      >
+        <label
+          htmlFor="username"
+        >
+          Username, Email or Phone number
+        </label>
+        <input
+          className="form-element"
+          id="username"
+          name="username"
+          required={true}
+          type="text"
+        />
+      </div>
+      <div
+        className="form-wrapper"
+      >
+        <label
+          htmlFor="forgotPassword"
+        >
+          Password
+        </label>
+        <Link
+          className="forgot-password transition"
+          replace={false}
+          to="#"
+        >
+          Forgot Password?
+        </Link>
+        <input
+          autoComplete="off"
+          className="form-element"
+          id="forgotPassword"
+          name="password"
+          required={true}
+          type="password"
+        />
+      </div>
+      <button
+        className="btn-brand btn-submit"
+        disabled={false}
+        type="submit"
+      >
+        <span>
+          Sign In 
+        </span>
+      </button>
+    </form>
+    <p
+      className="login-register-link"
+    >
+      New to iReporter?
+       
+      <Link
+        replace={false}
+        to="/sign-up"
+      >
+        Register here
+      </Link>
+    </p>
+  </div>
+</section>
+`;
+
+exports[`<Login> should render without crashing when login is successful 1`] = `
+<section
+  className="how login-wrapper bg-grey top-space"
+  data-pg-name="How it Works"
+>
+  <div
+    className="wrapper"
+    data-pg-name="Wrapper"
+  >
+    <form
+      className="card login-form"
+      noValidate={true}
+      onSubmit={[MockFunction]}
+    >
+      <header
+        className="form-header"
+      >
+        <h1
+          className="text-brand"
+        >
+          Welcome Back
+        </h1>
+        <p>
+          Sign in to start reporting...
+        </p>
+      </header>
+      <Alert
+        message={
+          Array [
+            "successful",
+          ]
+        }
+        success={true}
+        title=""
+      />
+      <div
+        className="form-wrapper"
+      >
+        <label
+          htmlFor="username"
+        >
+          Username, Email or Phone number
+        </label>
+        <input
+          className="form-element"
+          id="username"
+          name="username"
+          required={true}
+          type="text"
+        />
+      </div>
+      <div
+        className="form-wrapper"
+      >
+        <label
+          htmlFor="forgotPassword"
+        >
+          Password
+        </label>
+        <Link
+          className="forgot-password transition"
+          replace={false}
+          to="#"
+        >
+          Forgot Password?
+        </Link>
+        <input
+          autoComplete="off"
+          className="form-element"
+          id="forgotPassword"
+          name="password"
+          required={true}
+          type="password"
+        />
+      </div>
+      <button
+        className="btn-brand btn-submit"
+        disabled={true}
+        type="submit"
+      >
+        <span>
+          Sign In 
+        </span>
+        <img
+          alt="loading"
+          src={Object {}}
+          width="12"
+        />
+      </button>
+    </form>
+    <p
+      className="login-register-link"
+    >
+      New to iReporter?
+       
+      <Link
+        replace={false}
+        to="/sign-up"
+      >
+        Register here
+      </Link>
+    </p>
+  </div>
+</section>
+`;

@@ -84,10 +84,10 @@ exports[`<EditProfileContainer> should render without crashing 1`] = `
                   >
                     <Link
                       replace={false}
-                      to="/sign-in"
+                      to="/login"
                     >
                       <a
-                        href="/sign-in"
+                        href="/login"
                         onClick={[Function]}
                       >
                         Sign in

@@ -1,3 +1,7 @@
 export default {
-  dummy: {}
+  user: {
+    isBusy: false,
+    message: [],
+    loginSuccess: false
+  }
 };

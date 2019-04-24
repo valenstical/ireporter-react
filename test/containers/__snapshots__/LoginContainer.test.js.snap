@@ -1,0 +1,158 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LoginContainer> should render without crashing 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Connect(LoginContainer)>
+        <LoginContainer
+          isBusy={false}
+          login={[Function]}
+          loginSuccess={false}
+          message={Array []}
+        >
+          <Login
+            handleSubmit={[Function]}
+            isBusy={false}
+            loginSuccess={false}
+            message={Array []}
+          >
+            <section
+              className="how login-wrapper bg-grey top-space"
+              data-pg-name="How it Works"
+            >
+              <div
+                className="wrapper"
+                data-pg-name="Wrapper"
+              >
+                <form
+                  className="card login-form"
+                  noValidate={true}
+                  onSubmit={[Function]}
+                >
+                  <header
+                    className="form-header"
+                  >
+                    <h1
+                      className="text-brand"
+                    >
+                      Welcome Back
+                    </h1>
+                    <p>
+                      Sign in to start reporting...
+                    </p>
+                  </header>
+                  <div
+                    className="form-wrapper"
+                  >
+                    <label
+                      htmlFor="username"
+                    >
+                      Username, Email or Phone number
+                    </label>
+                    <input
+                      className="form-element"
+                      id="username"
+                      name="username"
+                      required={true}
+                      type="text"
+                    />
+                  </div>
+                  <div
+                    className="form-wrapper"
+                  >
+                    <label
+                      htmlFor="forgotPassword"
+                    >
+                      Password
+                    </label>
+                    <Link
+                      className="forgot-password transition"
+                      replace={false}
+                      to="#"
+                    >
+                      <a
+                        className="forgot-password transition"
+                        href="/"
+                        onClick={[Function]}
+                      >
+                        Forgot Password?
+                      </a>
+                    </Link>
+                    <input
+                      autoComplete="off"
+                      className="form-element"
+                      id="forgotPassword"
+                      name="password"
+                      required={true}
+                      type="password"
+                    />
+                  </div>
+                  <button
+                    className="btn-brand btn-submit"
+                    disabled={false}
+                    type="submit"
+                  >
+                    <span>
+                      Sign In 
+                    </span>
+                  </button>
+                </form>
+                <p
+                  className="login-register-link"
+                >
+                  New to iReporter?
+                   
+                  <Link
+                    replace={false}
+                    to="/sign-up"
+                  >
+                    <a
+                      href="/sign-up"
+                      onClick={[Function]}
+                    >
+                      Register here
+                    </a>
+                  </Link>
+                </p>
+              </div>
+            </section>
+          </Login>
+        </LoginContainer>
+      </Connect(LoginContainer)>
+    </Router>
+  </BrowserRouter>
+</Provider>
+`;

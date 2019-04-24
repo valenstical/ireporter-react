@@ -2,24 +2,24 @@ import typeGenerator from './actionTypes';
 import request from '../utils/request';
 import { saveUser } from '../utils/helpers';
 
-export const loginTypes = typeGenerator('LOG_IN');
+export const authTypes = typeGenerator('AUTHENTICATIONS');
 
 /**
- * Action creator for login operations
+ * Action creator for  login and signup operations
  * @param {string} type The action type
  * @param {object} data The data to dispatch
  */
-export const loginAction = (type, data) => ({ type, data });
+export const authAction = (type, data) => ({ type, data });
 
 /**
  * Authenticates the user credentials
- * @param {object} payload An object containing the username and password
+ * @param {object} payload An object containing the request parameters
  * @returns {object} The axios request promise object
  */
-const login = payload => async (dispatch) => {
-  dispatch(loginAction(loginTypes.loading, true));
+const authenticate = payload => async (dispatch) => {
+  dispatch(authAction(authTypes.loading, true));
   return request({
-    route: 'auth/login',
+    route: `auth/${payload.route}`,
     method: 'post',
     payload,
   }).then((response) => {
@@ -27,14 +27,14 @@ const login = payload => async (dispatch) => {
     const { token, user } = { ...data[0] };
     const profile = { token, ...user };
     saveUser(profile);
-    dispatch(loginAction(loginTypes.success, profile));
+    dispatch(authAction(authTypes.success, profile));
   }).catch((err) => {
     let message = ['Please check your network connection'];
     if (err.response) {
       const { data: { error } } = err.response;
       message = error;
     }
-    dispatch(loginAction(loginTypes.failure, message));
+    dispatch(authAction(authTypes.failure, message));
   });
 };
-export default login;
+export default authenticate;

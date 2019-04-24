@@ -4,25 +4,24 @@ import formDataJSON from 'formdata-json';
 import PropTypes from 'prop-types';
 import { createStructuredSelector } from 'reselect';
 import { Redirect } from 'react-router-dom';
-import Login from '../views/Login';
 import * as selectors from '../../selectors/authSelectors';
-import authenticate from '../../actions/authAction';
 import { scrollTop, isLoggedIn } from '../../utils/helpers';
-
+import Signup from '../views/Signup';
+import authenticate from '../../actions/authAction';
 
 /**
- * Container component for the Login view
+ * Container component for the Singup view
  * @export
- * @class LoginContainer
+ * @class SignupContainer
  * @extends {Component}
  */
-class LoginContainer extends Component {
-  handleLogin = async (event) => {
+class SignupContainer extends Component {
+  handleSignup = async (event) => {
     event.preventDefault();
     const payload = formDataJSON(new FormData(event.target));
-    payload.route = 'login';
-    const { login: processLogin } = this.props;
-    await processLogin(payload);
+    payload.route = 'signup';
+    const { signup: processSignup } = this.props;
+    await processSignup(payload);
     scrollTop();
   }
 
@@ -30,19 +29,20 @@ class LoginContainer extends Component {
     const { isBusy, message, success } = this.props;
     if (success || isLoggedIn()) return <Redirect to="/dashboard" />;
     return (
-      <Login
-      handleSubmit={this.handleLogin}
-      isBusy={isBusy} message={message}
+      <Signup
+      handleSubmit={this.handleSignup}
+      isBusy={isBusy}
+      message={message}
       success={success}
       />
     );
   }
 }
-LoginContainer.propTypes = {
+SignupContainer.propTypes = {
   isBusy: PropTypes.bool.isRequired,
   message: PropTypes.array.isRequired,
   success: PropTypes.bool.isRequired,
-  login: PropTypes.func.isRequired,
+  signup: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = createStructuredSelector(
@@ -54,7 +54,7 @@ const mapStateToProps = createStructuredSelector(
 );
 
 const mapDispatchToProps = dispatch => ({
-  login: payload => dispatch(authenticate(payload)),
+  signup: payload => dispatch(authenticate(payload)),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(LoginContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(SignupContainer);

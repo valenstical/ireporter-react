@@ -10,7 +10,7 @@ import Alert from './Alert';
  * @returns {object} The generated JSX object
  */
 export default function Login({
-  isBusy, message, handleSubmit, loginSuccess
+  isBusy, message, handleSubmit, success
 }) {
   return (
     <section className="how login-wrapper bg-grey top-space" data-pg-name="How it Works">
@@ -20,7 +20,7 @@ export default function Login({
             <h1 className="text-brand">Welcome Back</h1>
             <p>Sign in to start reporting...</p>
           </header>
-          {message.length > 0 && <Alert message={message} title={loginSuccess ? '' : 'Login Failed!'} success={loginSuccess} />}
+          {message.length > 0 && <Alert message={message} title={success ? '' : 'Login Failed!'} success={success} />}
           <div className="form-wrapper">
             <label htmlFor="username">Username, Email or Phone number</label>
             <input className="form-element" type="text" name="username" required id="username" />
@@ -50,6 +50,6 @@ New to iReporter?
 Login.propTypes = {
   isBusy: PropTypes.bool.isRequired,
   message: PropTypes.array.isRequired,
-  loginSuccess: PropTypes.bool.isRequired,
+  success: PropTypes.bool.isRequired,
   handleSubmit: PropTypes.func.isRequired,
 };

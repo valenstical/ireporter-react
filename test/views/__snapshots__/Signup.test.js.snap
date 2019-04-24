@@ -1,0 +1,603 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Signup> should render without crashing on startup 1`] = `
+<section
+  className="login-wrapper bg-grey top-space"
+  data-pg-name="How it Works"
+>
+  <form
+    className="wrapper"
+    data-pg-name="Wrapper"
+    noValidate={true}
+    onSubmit={[MockFunction]}
+  >
+    <div
+      className="card login-form login-form-lg"
+    >
+      <h1
+        className="text-brand"
+      >
+        WELCOME TO iREPORTER
+      </h1>
+      <p>
+        Let's help you quickly report cases of corruption and issues that need government attention to the appropriate authorities.
+        <span>
+           Register by filling out the form below to get started.
+        </span>
+      </p>
+      <small
+        className="form-instructions"
+      >
+        * All fields are required
+      </small>
+      <div
+        className="form-wrapper"
+      >
+        <label
+          htmlFor="firstname"
+        >
+          First Name 
+        </label>
+        <input
+          className="form-element"
+          id="firstname"
+          name="firstname"
+          required={true}
+          type="text"
+        />
+      </div>
+      <div
+        className="form-wrapper"
+      >
+        <label
+          htmlFor="lastname"
+        >
+          Last Name 
+        </label>
+        <input
+          className="form-element"
+          id="lastname"
+          name="lastname"
+          required={true}
+          type="text"
+        />
+      </div>
+      <div
+        className="form-wrapper"
+      >
+        <label
+          htmlFor="othernames"
+        >
+          Other Names
+          <small>
+            (optional)
+          </small>
+        </label>
+        <input
+          className="form-element"
+          id="othernames"
+          name="othernames"
+          required={true}
+          type="text"
+        />
+      </div>
+      <div
+        className="form-wrapper"
+      >
+        <label
+          htmlFor="phone"
+        >
+          Phone Number 
+        </label>
+        <input
+          className="form-element"
+          id="phone"
+          name="phoneNumber"
+          required={true}
+          type="tel"
+        />
+      </div>
+      <div
+        className="form-wrapper"
+      >
+        <label
+          htmlFor="email"
+        >
+          Email Address 
+        </label>
+        <input
+          className="form-element"
+          id="email"
+          name="email"
+          required={true}
+          type="email"
+        />
+      </div>
+    </div>
+    <div
+      className="card login-form login-form-lg"
+    >
+      <div
+        className="form-wrapper"
+      >
+        <label
+          htmlFor="username"
+        >
+          Choose a Username 
+        </label>
+        <input
+          className="form-element"
+          id="username"
+          name="username"
+          required={true}
+          type="text"
+        />
+      </div>
+      <div
+        className="form-wrapper"
+      >
+        <label
+          htmlFor="password"
+        >
+          Create a Password
+        </label>
+        <input
+          className="form-element"
+          id="password"
+          name="password"
+          required={true}
+          type="password"
+        />
+      </div>
+      <div
+        className="checkbox"
+      >
+        <label>
+          <input
+            id="termsCheckedBox"
+            required={true}
+            type="checkbox"
+          />
+          I agree to the
+          <Link
+            className="forgot-password"
+            replace={false}
+            to="#"
+          >
+            Terms and Conditions
+          </Link>
+        </label>
+      </div>
+      <button
+        className="btn-brand btn-submit"
+        type="submit"
+      >
+        <span>
+          Register Now
+        </span>
+      </button>
+    </div>
+    <p
+      className="login-register-link login-form-lg"
+    >
+      Already registered?
+       
+      <Link
+        replace={false}
+        to="/login"
+      >
+        Sign in
+      </Link>
+    </p>
+  </form>
+</section>
+`;
+
+exports[`<Signup> should render without crashing when login failed 1`] = `
+<section
+  className="login-wrapper bg-grey top-space"
+  data-pg-name="How it Works"
+>
+  <form
+    className="wrapper"
+    data-pg-name="Wrapper"
+    noValidate={true}
+    onSubmit={[MockFunction]}
+  >
+    <div
+      className="card login-form login-form-lg"
+    >
+      <h1
+        className="text-brand"
+      >
+        WELCOME TO iREPORTER
+      </h1>
+      <p>
+        Let's help you quickly report cases of corruption and issues that need government attention to the appropriate authorities.
+        <span>
+           Register by filling out the form below to get started.
+        </span>
+      </p>
+      <small
+        className="form-instructions"
+      >
+        * All fields are required
+      </small>
+      <Alert
+        message={
+          Array [
+            "failed",
+          ]
+        }
+        success={false}
+        title="Sign up Failed!"
+      />
+      <div
+        className="form-wrapper"
+      >
+        <label
+          htmlFor="firstname"
+        >
+          First Name 
+        </label>
+        <input
+          className="form-element"
+          id="firstname"
+          name="firstname"
+          required={true}
+          type="text"
+        />
+      </div>
+      <div
+        className="form-wrapper"
+      >
+        <label
+          htmlFor="lastname"
+        >
+          Last Name 
+        </label>
+        <input
+          className="form-element"
+          id="lastname"
+          name="lastname"
+          required={true}
+          type="text"
+        />
+      </div>
+      <div
+        className="form-wrapper"
+      >
+        <label
+          htmlFor="othernames"
+        >
+          Other Names
+          <small>
+            (optional)
+          </small>
+        </label>
+        <input
+          className="form-element"
+          id="othernames"
+          name="othernames"
+          required={true}
+          type="text"
+        />
+      </div>
+      <div
+        className="form-wrapper"
+      >
+        <label
+          htmlFor="phone"
+        >
+          Phone Number 
+        </label>
+        <input
+          className="form-element"
+          id="phone"
+          name="phoneNumber"
+          required={true}
+          type="tel"
+        />
+      </div>
+      <div
+        className="form-wrapper"
+      >
+        <label
+          htmlFor="email"
+        >
+          Email Address 
+        </label>
+        <input
+          className="form-element"
+          id="email"
+          name="email"
+          required={true}
+          type="email"
+        />
+      </div>
+    </div>
+    <div
+      className="card login-form login-form-lg"
+    >
+      <div
+        className="form-wrapper"
+      >
+        <label
+          htmlFor="username"
+        >
+          Choose a Username 
+        </label>
+        <input
+          className="form-element"
+          id="username"
+          name="username"
+          required={true}
+          type="text"
+        />
+      </div>
+      <div
+        className="form-wrapper"
+      >
+        <label
+          htmlFor="password"
+        >
+          Create a Password
+        </label>
+        <input
+          className="form-element"
+          id="password"
+          name="password"
+          required={true}
+          type="password"
+        />
+      </div>
+      <div
+        className="checkbox"
+      >
+        <label>
+          <input
+            id="termsCheckedBox"
+            required={true}
+            type="checkbox"
+          />
+          I agree to the
+          <Link
+            className="forgot-password"
+            replace={false}
+            to="#"
+          >
+            Terms and Conditions
+          </Link>
+        </label>
+      </div>
+      <button
+        className="btn-brand btn-submit"
+        type="submit"
+      >
+        <span>
+          Register Now
+        </span>
+      </button>
+    </div>
+    <p
+      className="login-register-link login-form-lg"
+    >
+      Already registered?
+       
+      <Link
+        replace={false}
+        to="/login"
+      >
+        Sign in
+      </Link>
+    </p>
+  </form>
+</section>
+`;
+
+exports[`<Signup> should render without crashing when login is successful 1`] = `
+<section
+  className="login-wrapper bg-grey top-space"
+  data-pg-name="How it Works"
+>
+  <form
+    className="wrapper"
+    data-pg-name="Wrapper"
+    noValidate={true}
+    onSubmit={[MockFunction]}
+  >
+    <div
+      className="card login-form login-form-lg"
+    >
+      <h1
+        className="text-brand"
+      >
+        WELCOME TO iREPORTER
+      </h1>
+      <p>
+        Let's help you quickly report cases of corruption and issues that need government attention to the appropriate authorities.
+        <span>
+           Register by filling out the form below to get started.
+        </span>
+      </p>
+      <small
+        className="form-instructions"
+      >
+        * All fields are required
+      </small>
+      <Alert
+        message={
+          Array [
+            "successful",
+          ]
+        }
+        success={true}
+        title=""
+      />
+      <div
+        className="form-wrapper"
+      >
+        <label
+          htmlFor="firstname"
+        >
+          First Name 
+        </label>
+        <input
+          className="form-element"
+          id="firstname"
+          name="firstname"
+          required={true}
+          type="text"
+        />
+      </div>
+      <div
+        className="form-wrapper"
+      >
+        <label
+          htmlFor="lastname"
+        >
+          Last Name 
+        </label>
+        <input
+          className="form-element"
+          id="lastname"
+          name="lastname"
+          required={true}
+          type="text"
+        />
+      </div>
+      <div
+        className="form-wrapper"
+      >
+        <label
+          htmlFor="othernames"
+        >
+          Other Names
+          <small>
+            (optional)
+          </small>
+        </label>
+        <input
+          className="form-element"
+          id="othernames"
+          name="othernames"
+          required={true}
+          type="text"
+        />
+      </div>
+      <div
+        className="form-wrapper"
+      >
+        <label
+          htmlFor="phone"
+        >
+          Phone Number 
+        </label>
+        <input
+          className="form-element"
+          id="phone"
+          name="phoneNumber"
+          required={true}
+          type="tel"
+        />
+      </div>
+      <div
+        className="form-wrapper"
+      >
+        <label
+          htmlFor="email"
+        >
+          Email Address 
+        </label>
+        <input
+          className="form-element"
+          id="email"
+          name="email"
+          required={true}
+          type="email"
+        />
+      </div>
+    </div>
+    <div
+      className="card login-form login-form-lg"
+    >
+      <div
+        className="form-wrapper"
+      >
+        <label
+          htmlFor="username"
+        >
+          Choose a Username 
+        </label>
+        <input
+          className="form-element"
+          id="username"
+          name="username"
+          required={true}
+          type="text"
+        />
+      </div>
+      <div
+        className="form-wrapper"
+      >
+        <label
+          htmlFor="password"
+        >
+          Create a Password
+        </label>
+        <input
+          className="form-element"
+          id="password"
+          name="password"
+          required={true}
+          type="password"
+        />
+      </div>
+      <div
+        className="checkbox"
+      >
+        <label>
+          <input
+            id="termsCheckedBox"
+            required={true}
+            type="checkbox"
+          />
+          I agree to the
+          <Link
+            className="forgot-password"
+            replace={false}
+            to="#"
+          >
+            Terms and Conditions
+          </Link>
+        </label>
+      </div>
+      <button
+        className="btn-brand btn-submit"
+        type="submit"
+      >
+        <span>
+          Register Now
+        </span>
+        <img
+          alt="loading"
+          src={Object {}}
+          width="12"
+        />
+      </button>
+    </div>
+    <p
+      className="login-register-link login-form-lg"
+    >
+      Already registered?
+       
+      <Link
+        replace={false}
+        to="/login"
+      >
+        Sign in
+      </Link>
+    </p>
+  </form>
+</section>
+`;

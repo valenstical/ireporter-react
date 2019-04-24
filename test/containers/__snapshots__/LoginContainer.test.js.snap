@@ -40,14 +40,14 @@ exports[`<LoginContainer> should render without crashing 1`] = `
         <LoginContainer
           isBusy={false}
           login={[Function]}
-          loginSuccess={false}
           message={Array []}
+          success={false}
         >
           <Login
             handleSubmit={[Function]}
             isBusy={false}
-            loginSuccess={false}
             message={Array []}
+            success={false}
           >
             <section
               className="how login-wrapper bg-grey top-space"

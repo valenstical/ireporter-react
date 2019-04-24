@@ -9,7 +9,7 @@ import HeaderContainer from './components/containers/HeaderContainer';
 import Footer from './components/views/Footer';
 import Landing from './components/views/Landing';
 import LoginContainer from './components/containers/LoginContainer';
-
+import SignupContainer from './components/containers/SignupContainer';
 /**
  * The main entry point of the application
  * @returns {object} The generated JSX object
@@ -23,6 +23,7 @@ function App() {
           <Switch>
             <Route path="/" component={Landing} exact />
             <Route path="/login" component={LoginContainer} />
+            <Route path="/sign-up" component={SignupContainer} />
           </Switch>
           <Footer />
         </>

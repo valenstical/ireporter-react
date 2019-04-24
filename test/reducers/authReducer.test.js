@@ -1,6 +1,6 @@
 import '@babel/polyfill';
-import loginReducer from '../../src/reducers/loginReducer';
-import { loginTypes } from '../../src/actions/loginAction';
+import loginReducer from '../../src/reducers/authReducer';
+import { authTypes } from '../../src/actions/authAction';
 import { mockState } from '../setup';
 
 
@@ -12,15 +12,15 @@ describe('Login Reducer', () => {
     expect(loginReducer(undefined, {})).toEqual({});
   });
   it('should return the correct state when loading', () => {
-    const action = { type: loginTypes.loading, data: true };
+    const action = { type: authTypes.loading, data: true };
     expect(loginReducer({}, action)).toEqual({ isBusy: true, message: [] });
   });
   it('should return the correct state on success', () => {
-    const action = { type: loginTypes.success, data: { firstname: 'john' } };
-    expect(loginReducer({}, action)).toEqual({ firstname: 'john', message: ['Login successful, redirecting...'], loginSuccess: true });
+    const action = { type: authTypes.success, data: { firstname: 'john' } };
+    expect(loginReducer({}, action)).toEqual({ firstname: 'john', message: ['Please wait while we redirect you...'], success: true });
   });
   it('should return the correct state on failure', () => {
-    const action = { type: loginTypes.failure, data: ['failed'] };
-    expect(loginReducer({}, action)).toEqual({ message: ['failed'], loginSuccess: false, isBusy: false });
+    const action = { type: authTypes.failure, data: ['failed'] };
+    expect(loginReducer({}, action)).toEqual({ message: ['failed'], success: false, isBusy: false });
   });
 });

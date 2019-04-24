@@ -1,5 +1,5 @@
 import '@babel/polyfill';
-import login, { loginTypes, loginAction } from '../../src/actions/loginAction';
+import authenticate, { authTypes, authAction } from '../../src/actions/authAction';
 import { createMockStore } from '../setup';
 import request from '../../src/utils/request';
 
@@ -7,23 +7,23 @@ const mockStore = createMockStore();
 
 jest.mock('../../src/utils/request');
 
-describe('Login Action creators', () => {
-  it('should return an object of the login action types', () => {
+describe('Auth Action creators', () => {
+  it('should return an object of the auth action types', () => {
     const expected = {
-      type: loginTypes.loading,
+      type: authTypes.loading,
       data: true,
     };
-    expect(loginAction(loginTypes.loading, true)).toEqual(expected);
+    expect(authAction(authTypes.loading, true)).toEqual(expected);
   });
-  it('should return the correct value on successful login', () => {
+  it('should return the correct value on successful authentication', () => {
     const response = { token: '', user: { firstname: 'john' } };
     const expected = [
       {
-        type: loginTypes.loading,
+        type: authTypes.loading,
         data: true,
       },
       {
-        type: loginTypes.success,
+        type: authTypes.success,
         data: { token: '', firstname: 'john' }
       }
     ];
@@ -31,18 +31,18 @@ describe('Login Action creators', () => {
 
     const store = mockStore();
 
-    return store.dispatch(login({})).then(() => {
+    return store.dispatch(authenticate({})).then(() => {
       expect(store.getActions()).toEqual(expected);
     });
   });
-  it('should return the correct value on failed login', () => {
+  it('should return the correct value on failed authentication', () => {
     const expected = [
       {
-        type: loginTypes.loading,
+        type: authTypes.loading,
         data: true,
       },
       {
-        type: loginTypes.failure,
+        type: authTypes.failure,
         data: ['failed']
       }
     ];
@@ -50,18 +50,18 @@ describe('Login Action creators', () => {
 
     const store = mockStore();
 
-    return store.dispatch(login({})).then(() => {
+    return store.dispatch(authenticate({})).then(() => {
       expect(store.getActions()).toEqual(expected);
     });
   });
   it('should return the correct value for unknown error', () => {
     const expected = [
       {
-        type: loginTypes.loading,
+        type: authTypes.loading,
         data: true,
       },
       {
-        type: loginTypes.failure,
+        type: authTypes.failure,
         data: ['Please check your network connection']
       }
     ];
@@ -69,7 +69,7 @@ describe('Login Action creators', () => {
 
     const store = mockStore();
 
-    return store.dispatch(login({})).then(() => {
+    return store.dispatch(authenticate({})).then(() => {
       expect(store.getActions()).toEqual(expected);
     });
   });

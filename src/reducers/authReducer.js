@@ -1,4 +1,4 @@
-import { loginTypes } from '../actions/loginAction';
+import { authTypes } from '../actions/authAction';
 
 /**
  * A reducer that formats the data before updating the redux store with the new state
@@ -9,17 +9,17 @@ import { loginTypes } from '../actions/loginAction';
 export default (state = {}, action) => {
   const { type, data } = action;
   switch (type) {
-    case loginTypes.loading:
+    case authTypes.loading:
       return {
         ...state, isBusy: true, message: []
       };
-    case loginTypes.success:
+    case authTypes.success:
       return {
-        ...state, ...data, message: ['Login successful, redirecting...'], loginSuccess: true
+        ...state, ...data, message: ['Please wait while we redirect you...'], success: true
       };
-    case loginTypes.failure:
+    case authTypes.failure:
       return {
-        ...state, isBusy: false, message: data, loginSuccess: false
+        ...state, isBusy: false, message: data, success: false
       };
     default:
       return state;

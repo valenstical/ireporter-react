@@ -12,7 +12,7 @@ export const mockState = {
   user: {
     isBusy: false,
     message: [],
-    loginSuccess: false
+    success: false
   }
 };
 

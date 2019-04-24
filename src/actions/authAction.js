@@ -1,6 +1,5 @@
 import typeGenerator from './actionTypes';
 import request from '../utils/request';
-import { saveUser } from '../utils/helpers';
 
 export const authTypes = typeGenerator('AUTHENTICATIONS');
 
@@ -19,14 +18,13 @@ export const authAction = (type, data) => ({ type, data });
 const authenticate = payload => async (dispatch) => {
   dispatch(authAction(authTypes.loading, true));
   return request({
-    route: `auth/${payload.route}`,
-    method: 'post',
+    route: payload.route,
+    method: payload.method,
     payload,
   }).then((response) => {
     const { data } = response.data;
     const { token, user } = { ...data[0] };
     const profile = { token, ...user };
-    saveUser(profile);
     dispatch(authAction(authTypes.success, profile));
   }).catch((err) => {
     let message = ['Please check your network connection'];

@@ -15,7 +15,7 @@ export default (state = {}, action) => {
       };
     case authTypes.success:
       return {
-        ...state, ...data, message: ['Please wait while we redirect you...'], success: true
+        ...state, ...data, message: ['Please wait while we redirect you...'], success: true, isLoggedIn: true, isBusy: false
       };
     case authTypes.failure:
       return {

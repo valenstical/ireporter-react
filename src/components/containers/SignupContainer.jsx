@@ -4,8 +4,8 @@ import formDataJSON from 'formdata-json';
 import PropTypes from 'prop-types';
 import { createStructuredSelector } from 'reselect';
 import { Redirect } from 'react-router-dom';
-import * as selectors from '../../selectors/authSelectors';
-import { scrollTop, isLoggedIn } from '../../utils/helpers';
+import { getUser } from '../../selectors';
+import { scrollTop } from '../../utils/helpers';
 import Signup from '../views/Signup';
 import authenticate from '../../actions/authAction';
 
@@ -19,37 +19,32 @@ class SignupContainer extends Component {
   handleSignup = async (event) => {
     event.preventDefault();
     const payload = formDataJSON(new FormData(event.target));
-    payload.route = 'signup';
+    payload.route = 'auth/signup';
+    payload.method = 'post';
     const { signup: processSignup } = this.props;
     await processSignup(payload);
     scrollTop();
   }
 
   render() {
-    const { isBusy, message, success } = this.props;
-    if (success || isLoggedIn()) return <Redirect to="/dashboard" />;
+    const { user } = this.props;
+    if (user.success || user.isLoggedIn) return <Redirect to="/dashboard" />;
     return (
       <Signup
       handleSubmit={this.handleSignup}
-      isBusy={isBusy}
-      message={message}
-      success={success}
+      user={user}
       />
     );
   }
 }
 SignupContainer.propTypes = {
-  isBusy: PropTypes.bool.isRequired,
-  message: PropTypes.array.isRequired,
-  success: PropTypes.bool.isRequired,
-  signup: PropTypes.func.isRequired,
+  user: PropTypes.object.isRequired,
+  signup: PropTypes.func.isRequired
 };
 
 const mapStateToProps = createStructuredSelector(
   {
-    isBusy: selectors.getIsBusy,
-    message: selectors.getMessage,
-    success: selectors.getAuthSuccess,
+    user: getUser
   }
 );
 

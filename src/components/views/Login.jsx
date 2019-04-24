@@ -9,9 +9,7 @@ import Alert from './Alert';
  * @param {object} props An object containing the required properties of the component
  * @returns {object} The generated JSX object
  */
-export default function Login({
-  isBusy, message, handleSubmit, success
-}) {
+export default function Login({ user, handleSubmit }) {
   return (
     <section className="how login-wrapper bg-grey top-space" data-pg-name="How it Works">
       <div className="wrapper" data-pg-name="Wrapper">
@@ -20,7 +18,7 @@ export default function Login({
             <h1 className="text-brand">Welcome Back</h1>
             <p>Sign in to start reporting...</p>
           </header>
-          {message.length > 0 && <Alert message={message} title={success ? '' : 'Login Failed!'} success={success} />}
+          {user.message.length > 0 && <Alert message={user.message} title={user.success ? 'Login Successful!' : 'Login Failed!'} success={user.success} />}
           <div className="form-wrapper">
             <label htmlFor="username">Username, Email or Phone number</label>
             <input className="form-element" type="text" name="username" required id="username" />
@@ -30,9 +28,9 @@ export default function Login({
             <Link to="#" className="forgot-password transition">Forgot Password?</Link>
             <input className="form-element" type="password" name="password" required id="forgotPassword" autoComplete="off" />
           </div>
-          <button className="btn-brand btn-submit" type="submit" disabled={isBusy}>
+          <button className="btn-brand btn-submit" type="submit" disabled={user.isBusy}>
             <span>Sign In </span>
-            { isBusy && <img src={loadingIcon} width="12" alt="loading" />}
+            { user.isBusy && <img src={loadingIcon} width="12" alt="loading" />}
           </button>
         </form>
         <p className="login-register-link">
@@ -48,8 +46,6 @@ New to iReporter?
 }
 
 Login.propTypes = {
-  isBusy: PropTypes.bool.isRequired,
-  message: PropTypes.array.isRequired,
-  success: PropTypes.bool.isRequired,
+  user: PropTypes.object.isRequired,
   handleSubmit: PropTypes.func.isRequired,
 };

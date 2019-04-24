@@ -13,7 +13,9 @@ exports[`<LoginContainer> should render without crashing 1`] = `
     }
   }
 >
-  <BrowserRouter>
+  <BrowserRouter
+    keyLength={0}
+  >
     <Router
       history={
         Object {
@@ -38,16 +40,24 @@ exports[`<LoginContainer> should render without crashing 1`] = `
     >
       <Connect(LoginContainer)>
         <LoginContainer
-          isBusy={false}
           login={[Function]}
-          message={Array []}
-          success={false}
+          user={
+            Object {
+              "isBusy": false,
+              "message": Array [],
+              "success": false,
+            }
+          }
         >
           <Login
             handleSubmit={[Function]}
-            isBusy={false}
-            message={Array []}
-            success={false}
+            user={
+              Object {
+                "isBusy": false,
+                "message": Array [],
+                "success": false,
+              }
+            }
           >
             <section
               className="how login-wrapper bg-grey top-space"

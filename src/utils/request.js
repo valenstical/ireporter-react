@@ -10,13 +10,10 @@ import axios from 'axios';
  * @returns {object} The axios promise object
  */
 const request = async (
-  {
-    route,
-    method,
-    payload,
-    token
-  }
+  { route, method, payload }
 ) => {
+  const persisted = JSON.parse(localStorage.getItem('persist:root'));
+  const { token } = JSON.parse(persisted.user);
   method = method || 'get';
   const headers = {
     Authorization: `Bearer ${token}`,

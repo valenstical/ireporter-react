@@ -8,9 +8,7 @@ import Alert from './Alert';
  * The Signup component
  * @returns {object} The generated JSX object
  */
-export default function Signup({
-  isBusy, message, handleSubmit, success
-}) {
+export default function Signup({ handleSubmit, user }) {
   return (
     <section className="login-wrapper bg-grey top-space" data-pg-name="How it Works">
       <form className="wrapper" data-pg-name="Wrapper" onSubmit={handleSubmit} noValidate>
@@ -22,7 +20,7 @@ need government attention to the appropriate authorities.
             <span> Register by filling out the form below to get started.</span>
           </p>
           <small className="form-instructions">* All fields are required</small>
-          {message.length > 0 && <Alert message={message} title={success ? '' : 'Sign up Failed!'} success={success} />}
+          {user.message.length > 0 && <Alert message={user.message} title={user.success ? '' : 'Sign up Failed!'} success={user.success} />}
 
           <div className="form-wrapper">
             <label htmlFor="firstname">First Name </label>
@@ -55,7 +53,7 @@ Other Names
           </div>
           <div className="form-wrapper">
             <label htmlFor="password">Create a Password</label>
-            <input className="form-element" type="password" name="password" required id="password" />
+            <input className="form-element" type="password" name="password" required id="password" autoComplete="off" />
           </div>
           <div className="checkbox">
             <label>
@@ -66,7 +64,7 @@ Other Names
           </div>
           <button className="btn-brand btn-submit" type="submit">
             <span>Register Now</span>
-            { isBusy && <img src={loadingIcon} width="12" alt="loading" />}
+            { user.isBusy && <img src={loadingIcon} width="12" alt="loading" />}
           </button>
         </div>
         <p className="login-register-link login-form-lg">
@@ -81,8 +79,6 @@ Already registered?
 }
 
 Signup.propTypes = {
-  isBusy: PropTypes.bool.isRequired,
-  message: PropTypes.array.isRequired,
-  success: PropTypes.bool.isRequired,
+  user: PropTypes.object.isRequired,
   handleSubmit: PropTypes.func.isRequired,
 };

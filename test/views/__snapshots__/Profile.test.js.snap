@@ -1,0 +1,356 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Profile> should render without crashing on failed profile update 1`] = `
+<main
+  className="login-wrapper top-space"
+  data-pg-name="Dashboard"
+>
+  <section
+    className="heading"
+  >
+    <div
+      className="wrapper"
+      data-pg-name="Wrapper"
+    >
+      <div
+        className="bread"
+      >
+        <Link
+          replace={false}
+          to="/dashboard"
+        >
+          Home
+        </Link>
+        <i
+          className="fa fa-angle-right"
+        />
+        <a
+          className="active"
+        >
+          Edit Profile
+        </a>
+      </div>
+    </div>
+  </section>
+  <section
+    className="edit-profile-wrapper"
+  >
+    <div
+      className="wrapper"
+      data-pg-name="Wrapper"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="column column-md-8"
+        >
+          <form
+            className="card"
+            noValidate={true}
+            onSubmit={[MockFunction]}
+          >
+            <Alert
+              message={
+                Array [
+                  "failed",
+                ]
+              }
+              success={false}
+              title="Something went wrong!"
+            />
+            <div
+              className="form-wrapper"
+            >
+              <label
+                htmlFor="firstname"
+              >
+                First Name 
+              </label>
+              <input
+                className="form-element text-capitalize"
+                id="firstname"
+                name="firstname"
+                required={true}
+                type="text"
+              />
+            </div>
+            <div
+              className="form-wrapper"
+            >
+              <label
+                htmlFor="lastname"
+              >
+                Last Name 
+              </label>
+              <input
+                className="form-element text-capitalize"
+                id="lastname"
+                name="lastname"
+                required={true}
+                type="text"
+              />
+            </div>
+            <div
+              className="form-wrapper"
+            >
+              <label
+                htmlFor="othername"
+              >
+                Other Name
+              </label>
+              <input
+                className="form-element text-capitalize"
+                id="othername"
+                name="othernames"
+                type="text"
+              />
+            </div>
+            <div
+              className="form-wrapper"
+            >
+              <label
+                htmlFor="email"
+              >
+                Email 
+              </label>
+              <input
+                className="form-element"
+                id="email"
+                name="email"
+                required={true}
+                type="email"
+              />
+            </div>
+            <div
+              className="form-wrapper"
+            >
+              <label
+                htmlFor="phone"
+              >
+                Phone Number 
+              </label>
+              <input
+                className="form-element"
+                id="phone"
+                name="phoneNumber"
+                required={true}
+                type="tel"
+              />
+            </div>
+            <div
+              className="form-wrapper"
+            >
+              <label
+                htmlFor="username"
+              >
+                Username 
+              </label>
+              <input
+                className="form-element"
+                id="username"
+                name="username"
+                required={true}
+                type="text"
+              />
+            </div>
+            <button
+              className="btn-brand btn-250 btn-submit"
+              disabled={false}
+              type="submit"
+            >
+              <span>
+                Update Profile
+              </span>
+            </button>
+            <input
+              name="userId"
+              type="hidden"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+`;
+
+exports[`<Profile> should render without crashing on successful profile update 1`] = `
+<main
+  className="login-wrapper top-space"
+  data-pg-name="Dashboard"
+>
+  <section
+    className="heading"
+  >
+    <div
+      className="wrapper"
+      data-pg-name="Wrapper"
+    >
+      <div
+        className="bread"
+      >
+        <Link
+          replace={false}
+          to="/dashboard"
+        >
+          Home
+        </Link>
+        <i
+          className="fa fa-angle-right"
+        />
+        <a
+          className="active"
+        >
+          Edit Profile
+        </a>
+      </div>
+    </div>
+  </section>
+  <section
+    className="edit-profile-wrapper"
+  >
+    <div
+      className="wrapper"
+      data-pg-name="Wrapper"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="column column-md-8"
+        >
+          <form
+            className="card"
+            noValidate={true}
+            onSubmit={[MockFunction]}
+          >
+            <Alert
+              message={
+                Array [
+                  "Your profile has was updated successfully.",
+                ]
+              }
+              success={true}
+              title="Profile Updated!"
+            />
+            <div
+              className="form-wrapper"
+            >
+              <label
+                htmlFor="firstname"
+              >
+                First Name 
+              </label>
+              <input
+                className="form-element text-capitalize"
+                id="firstname"
+                name="firstname"
+                required={true}
+                type="text"
+              />
+            </div>
+            <div
+              className="form-wrapper"
+            >
+              <label
+                htmlFor="lastname"
+              >
+                Last Name 
+              </label>
+              <input
+                className="form-element text-capitalize"
+                id="lastname"
+                name="lastname"
+                required={true}
+                type="text"
+              />
+            </div>
+            <div
+              className="form-wrapper"
+            >
+              <label
+                htmlFor="othername"
+              >
+                Other Name
+              </label>
+              <input
+                className="form-element text-capitalize"
+                id="othername"
+                name="othernames"
+                type="text"
+              />
+            </div>
+            <div
+              className="form-wrapper"
+            >
+              <label
+                htmlFor="email"
+              >
+                Email 
+              </label>
+              <input
+                className="form-element"
+                id="email"
+                name="email"
+                required={true}
+                type="email"
+              />
+            </div>
+            <div
+              className="form-wrapper"
+            >
+              <label
+                htmlFor="phone"
+              >
+                Phone Number 
+              </label>
+              <input
+                className="form-element"
+                id="phone"
+                name="phoneNumber"
+                required={true}
+                type="tel"
+              />
+            </div>
+            <div
+              className="form-wrapper"
+            >
+              <label
+                htmlFor="username"
+              >
+                Username 
+              </label>
+              <input
+                className="form-element"
+                id="username"
+                name="username"
+                required={true}
+                type="text"
+              />
+            </div>
+            <button
+              className="btn-brand btn-250 btn-submit"
+              disabled={true}
+              type="submit"
+            >
+              <span>
+                Update Profile
+              </span>
+              <img
+                alt="loading"
+                src={Object {}}
+                width="12"
+              />
+            </button>
+            <input
+              name="userId"
+              type="hidden"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+`;

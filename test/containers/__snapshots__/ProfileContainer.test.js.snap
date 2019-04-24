@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProfileContainer> should render without crashing 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <BrowserRouter
+    keyLength={0}
+  >
+    <Router
+      history={
+        Object {
+          "action": "REPLACE",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/login",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Connect(ProfileContainer)>
+        <ProfileContainer
+          editProfile={[Function]}
+          user={
+            Object {
+              "isBusy": false,
+              "message": Array [],
+              "success": false,
+            }
+          }
+        >
+          <Redirect
+            push={false}
+            to="/login"
+          />
+        </ProfileContainer>
+      </Connect(ProfileContainer)>
+    </Router>
+  </BrowserRouter>
+</Provider>
+`;

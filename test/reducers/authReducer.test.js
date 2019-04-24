@@ -17,7 +17,9 @@ describe('Login Reducer', () => {
   });
   it('should return the correct state on success', () => {
     const action = { type: authTypes.success, data: { firstname: 'john' } };
-    expect(loginReducer({}, action)).toEqual({ firstname: 'john', message: ['Please wait while we redirect you...'], success: true });
+    expect(loginReducer({}, action)).toEqual({
+      firstname: 'john', message: ['Please wait while we redirect you...'], success: true, isBusy: false, isLoggedIn: true
+    });
   });
   it('should return the correct state on failure', () => {
     const action = { type: authTypes.failure, data: ['failed'] };

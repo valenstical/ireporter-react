@@ -5,9 +5,9 @@ import PropTypes from 'prop-types';
 import { createStructuredSelector } from 'reselect';
 import { Redirect } from 'react-router-dom';
 import Login from '../views/Login';
-import * as selectors from '../../selectors/authSelectors';
+import { getUser } from '../../selectors';
 import authenticate from '../../actions/authAction';
-import { scrollTop, isLoggedIn } from '../../utils/helpers';
+import { scrollTop } from '../../utils/helpers';
 
 
 /**
@@ -20,36 +20,32 @@ class LoginContainer extends Component {
   handleLogin = async (event) => {
     event.preventDefault();
     const payload = formDataJSON(new FormData(event.target));
-    payload.route = 'login';
+    payload.route = 'auth/login';
+    payload.method = 'post';
     const { login: processLogin } = this.props;
     await processLogin(payload);
     scrollTop();
   }
 
   render() {
-    const { isBusy, message, success } = this.props;
-    if (success || isLoggedIn()) return <Redirect to="/dashboard" />;
+    const { user } = this.props;
+    if (user.success || user.isLoggedIn) return <Redirect to="/dashboard" />;
     return (
       <Login
       handleSubmit={this.handleLogin}
-      isBusy={isBusy} message={message}
-      success={success}
+      user={user}
       />
     );
   }
 }
 LoginContainer.propTypes = {
-  isBusy: PropTypes.bool.isRequired,
-  message: PropTypes.array.isRequired,
-  success: PropTypes.bool.isRequired,
+  user: PropTypes.object.isRequired,
   login: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = createStructuredSelector(
   {
-    isBusy: selectors.getIsBusy,
-    message: selectors.getMessage,
-    success: selectors.getAuthSuccess,
+    user: getUser,
   }
 );
 

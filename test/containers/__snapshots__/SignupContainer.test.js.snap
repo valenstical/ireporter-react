@@ -13,7 +13,9 @@ exports[`<SignupContainer> should render without crashing 1`] = `
     }
   }
 >
-  <BrowserRouter>
+  <BrowserRouter
+    keyLength={0}
+  >
     <Router
       history={
         Object {
@@ -38,16 +40,24 @@ exports[`<SignupContainer> should render without crashing 1`] = `
     >
       <Connect(SignupContainer)>
         <SignupContainer
-          isBusy={false}
-          message={Array []}
           signup={[Function]}
-          success={false}
+          user={
+            Object {
+              "isBusy": false,
+              "message": Array [],
+              "success": false,
+            }
+          }
         >
           <Signup
             handleSubmit={[Function]}
-            isBusy={false}
-            message={Array []}
-            success={false}
+            user={
+              Object {
+                "isBusy": false,
+                "message": Array [],
+                "success": false,
+              }
+            }
           >
             <section
               className="login-wrapper bg-grey top-space"
@@ -190,6 +200,7 @@ exports[`<SignupContainer> should render without crashing 1`] = `
                       Create a Password
                     </label>
                     <input
+                      autoComplete="off"
                       className="form-element"
                       id="password"
                       name="password"

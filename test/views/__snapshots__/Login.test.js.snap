@@ -222,11 +222,11 @@ exports[`<Login> should render without crashing when login is successful 1`] = `
       <Alert
         message={
           Array [
-            "successful",
+            "success",
           ]
         }
         success={true}
-        title=""
+        title="Login Successful!"
       />
       <div
         className="form-wrapper"

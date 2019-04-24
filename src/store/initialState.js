@@ -2,6 +2,7 @@ export default {
   user: {
     isBusy: false,
     message: [],
-    success: false
+    success: false,
+    isLoggedIn: false,
   }
 };

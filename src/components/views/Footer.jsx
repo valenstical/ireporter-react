@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+/**
+ * The footer component
+ * @returns {object} The generated JSX object
+ */
 export default function Footer() {
   return (
     <footer className="footer">

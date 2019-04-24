@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Alert> should render without crashing for default context 1`] = `
+<div
+  className="alert"
+>
+  <h4 />
+  <ol
+    className="unstyled-list"
+  />
+</div>
+`;
+
+exports[`<Alert> should render without crashing for empty message 1`] = `
+<div
+  className="alert"
+>
+  <h4 />
+  <ol
+    className="unstyled-list"
+  />
+</div>
+`;
+
+exports[`<Alert> should render without crashing for non empty message 1`] = `
+<div
+  className="alert"
+>
+  <h4 />
+  <ol
+    className="unstyled-list"
+  >
+    <li
+      key="hello"
+    >
+      hello
+    </li>
+    <li
+      key="hi"
+    >
+      hi
+    </li>
+  </ol>
+</div>
+`;
+
+exports[`<Alert> should render without crashing for successful context 1`] = `
+<div
+  className="alert alert-success"
+>
+  <h4 />
+  <ol
+    className="unstyled-list"
+  />
+</div>
+`;

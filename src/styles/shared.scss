@@ -979,3 +979,12 @@ section.tab-pane {
     color: #77838f;
     background-color: transparent;
 }
+
+.alert.alert-success{
+    background-color: #009f8b;
+}
+
+.alert li:only-child{
+    list-style-type: none;
+    margin-left: 0px;
+}

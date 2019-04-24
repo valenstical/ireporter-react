@@ -36,7 +36,7 @@ exports[`<Header> should render without crashing 1`] = `
         >
           <Link
             replace={false}
-            to="/sign-in"
+            to="/login"
           >
             Sign in
           </Link>

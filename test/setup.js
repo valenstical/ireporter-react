@@ -9,7 +9,11 @@ import { BrowserRouter } from 'react-router-dom';
 
 
 export const mockState = {
-  dummy: {}
+  user: {
+    isBusy: false,
+    message: [],
+    loginSuccess: false
+  }
 };
 
 export const createMockStore = () => {

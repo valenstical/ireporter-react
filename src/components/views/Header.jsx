@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+/**
+ * The header component
+ * @returns {object} The generated JSX object
+ */
 export default function Header() {
   return (
     <nav className="navigation">
@@ -12,7 +16,7 @@ export default function Header() {
               <Link to="/">Home</Link>
             </li>
             <li data-pg-name="Nav Item">
-              <Link to="/sign-in">Sign in</Link>
+              <Link to="/login">Sign in</Link>
             </li>
             <li data-pg-name="Nav Item" className="btn-cta">
               <Link to="/sign-up" className="btn-brand transition">Report a case</Link>

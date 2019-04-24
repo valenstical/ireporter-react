@@ -13,7 +13,9 @@ exports[`<ProfileContainer> should render without crashing 1`] = `
     }
   }
 >
-  <BrowserRouter>
+  <BrowserRouter
+    keyLength={0}
+  >
     <Router
       history={
         Object {
@@ -27,7 +29,6 @@ exports[`<ProfileContainer> should render without crashing 1`] = `
           "listen": [Function],
           "location": Object {
             "hash": "",
-            "key": "wkohnl",
             "pathname": "/login",
             "search": "",
             "state": undefined,

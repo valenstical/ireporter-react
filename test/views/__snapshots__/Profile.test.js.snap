@@ -48,6 +48,7 @@ exports[`<Profile> should render without crashing on failed profile update 1`] =
           <form
             className="card"
             noValidate={true}
+            onSubmit={[MockFunction]}
           >
             <Alert
               message={
@@ -222,6 +223,7 @@ exports[`<Profile> should render without crashing on successful profile update 1
           <form
             className="card"
             noValidate={true}
+            onSubmit={[MockFunction]}
           >
             <Alert
               message={

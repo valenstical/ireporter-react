@@ -13,7 +13,9 @@ exports[`<EditProfileContainer> should render without crashing 1`] = `
     }
   }
 >
-  <BrowserRouter>
+  <BrowserRouter
+    keyLength={0}
+  >
     <Router
       history={
         Object {

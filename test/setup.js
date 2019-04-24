@@ -27,7 +27,7 @@ const setup = (component, initailState = mockState) => {
   configure({ adapter: new Adapter() });
   const connectedWrapper = mount(
     <Provider store={mockStore(initailState)}>
-      <BrowserRouter>
+      <BrowserRouter keyLength={0}>
         {component}
       </BrowserRouter>
     </Provider>

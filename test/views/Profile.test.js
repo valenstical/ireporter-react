@@ -7,6 +7,8 @@ describe('<Profile>', () => {
     const wrapper = shallow(
       <Profile
       user={{ isBusy: true, success: true, message: ['success'] }}
+      handleEditProfile={jest.fn()}
+
     />
     );
     expect(wrapper).toMatchSnapshot();
@@ -15,6 +17,7 @@ describe('<Profile>', () => {
     const wrapper = shallow(
       <Profile
       user={{ isBusy: false, success: false, message: ['failed'] }}
+      handleEditProfile={jest.fn()}
     />
     );
     expect(wrapper).toMatchSnapshot();

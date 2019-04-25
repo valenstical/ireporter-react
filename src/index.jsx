@@ -13,7 +13,7 @@ import Landing from './components/views/Landing';
 import LoginContainer from './components/containers/LoginContainer';
 import SignupContainer from './components/containers/SignupContainer';
 import ProfileContainer from './components/containers/ProfileContainer';
-
+import CreateReportContainer from './components/containers/CreateReportContainer';
 
 const { store, persistor } = reduxStore;
 
@@ -31,9 +31,10 @@ function App() {
             <HeaderContainer />
             <Switch>
               <Route path="/" component={Landing} exact />
-              <Route path="/login" component={LoginContainer} />
-              <Route path="/sign-up" component={SignupContainer} />
-              <Route path="/profile" component={ProfileContainer} />
+              <Route path="/login" component={LoginContainer} exact />
+              <Route path="/sign-up" component={SignupContainer} exact />
+              <Route path="/profile" component={ProfileContainer} exact />
+              <Route path="/create-report" component={CreateReportContainer} exact />
             </Switch>
             <Footer />
           </>

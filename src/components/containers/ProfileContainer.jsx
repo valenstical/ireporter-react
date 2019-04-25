@@ -27,14 +27,6 @@ class ProfileContainer extends Component {
     scrollTop();
   }
 
-  handleChangePassword = async (event) => {
-    event.preventDefault();
-    const payload = formDataJSON(new FormData(event.target));
-    payload.route = 'users/password';
-    payload.method = 'patch';
-    scrollTop();
-  }
-
   render() {
     const { user } = this.props;
     if (!user.isLoggedIn) return <Redirect to="/login" />;

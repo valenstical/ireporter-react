@@ -4,5 +4,10 @@ export default {
     message: [],
     success: false,
     isLoggedIn: false,
+  },
+  report: {
+    message: [],
+    isBusy: false,
+    success: false,
   }
 };

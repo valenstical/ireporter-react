@@ -1,0 +1,1060 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CreateReport> should render without crashing for failed report 1`] = `
+<section
+  className="login-wrapper top-space account-wrapper"
+  data-pg-name="Dashboard"
+>
+  <section
+    className="heading"
+  >
+    <div
+      className="wrapper"
+      data-pg-name="Wrapper"
+    >
+      <div
+        className="max-width-800"
+      >
+        <div
+          className="bread"
+        >
+          <h1>
+            Report an Incident
+          </h1>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div
+    className="wrapper"
+    data-pg-name="Wrapper"
+  >
+    <form
+      noValidate={true}
+      onSubmit={[MockFunction]}
+    >
+      <Alert
+        message={
+          Array [
+            "failed",
+          ]
+        }
+        success={false}
+        title="Oops!"
+      />
+      <div
+        className="report-item card card-sm max-width-800 create-report-details"
+      >
+        <div
+          className="form-wrapper"
+        >
+          <label
+            htmlFor="title"
+          >
+            Title 
+          </label>
+          <small
+            className="text-helper"
+          >
+            (e.g Power outage for over 3 weeks around Aba market)
+          </small>
+          <input
+            className="form-element"
+            id="title"
+            name="title"
+            required={true}
+            type="text"
+          />
+        </div>
+        <div
+          className="form-wrapper no-margin-btm"
+        >
+          <label
+            htmlFor="comments"
+          >
+            Comment
+          </label>
+          <small
+            className="text-helper"
+          >
+            (Write full details here)
+          </small>
+          <textarea
+            className="form-element"
+            id="comments"
+            name="comment"
+            required={true}
+          />
+        </div>
+      </div>
+      <div
+        className="report-item card card-sm max-width-800 create-report-details padding-zero-btm"
+      >
+        <h2
+          className="report-box-title"
+        >
+          Report Type
+        </h2>
+        <p>
+          Is this incident linked to corruption or just an issue that needs government intervention ?
+        </p>
+        <div
+          className="row"
+          data-pg-name="Row"
+        >
+          <div
+            className="column column-md-6"
+            data-pg-name="Column"
+          >
+            <div
+              className="report-item max-width-800 report-box card no-margin-btm"
+              title="Red Flag Report"
+            >
+              <h4>
+                Corruption case
+                 
+                <i
+                  className="fa fa-flag flag"
+                  title="Red Flag Report"
+                />
+              </h4>
+              <p>
+                e.g. bribery, extortion, money laundering, e.t.c
+              </p>
+              <input
+                className="radio-fine"
+                data-pg-hidden={true}
+                defaultChecked={true}
+                defaultValue="red-flag"
+                name="type"
+                type="radio"
+              />
+              <div
+                className="pg-empty-placeholder radio-mark"
+              />
+            </div>
+          </div>
+          <div
+            className="column column-md-6"
+            data-pg-name="Column"
+          >
+            <div
+              className="report-item max-width-800 report-box card"
+              title="Intervention Report"
+            >
+              <h4>
+                Intervention Case
+                 
+                <i
+                  className="fa flag fa-bullhorn flag-intervention"
+                  title="Intervention Report"
+                />
+              </h4>
+              <p>
+                e.g. bad road, collapsed bridge, flooding, e.t.c
+              </p>
+              <input
+                className="radio-fine"
+                data-pg-hidden={true}
+                defaultChecked={false}
+                defaultValue="intervention"
+                name="type"
+                type="radio"
+              />
+              <div
+                className="pg-empty-placeholder radio-mark"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="report-item card card-sm max-width-800 create-report-details padding-zero-btm"
+      >
+        <header
+          className="header-create"
+        >
+          <h2
+            className="report-box-title"
+          >
+            Location
+          </h2>
+          <p>
+            Where did this happen? Enter the latitude/longitude. You can use
+             
+            <Link
+              replace={false}
+              target="_blank"
+              to="https://maps.google.com"
+            >
+              <strong>
+                <ins>
+                  Google Map
+                </ins>
+              </strong>
+            </Link>
+             
+            for help.
+          </p>
+          <p
+            className="hidden"
+          >
+            Where did this happen? Enter the latitude/longitude or simply use the marker to choose a location from the map
+          </p>
+        </header>
+        <div
+          className="row"
+          data-pg-name="Row"
+        >
+          <div
+            className="column-md-6 column column-xs-6"
+            data-pg-name="column-md-6"
+          >
+            <div
+              className="form-wrapper"
+            >
+              <label
+                htmlFor="latitude"
+              >
+                Latitude
+              </label>
+              <input
+                className="form-element"
+                id="latitude"
+                name="latitude"
+                required={true}
+                type="tel"
+              />
+            </div>
+          </div>
+          <div
+            className="column-md-6 column column-xs-6"
+            data-pg-name="column-md-6"
+          >
+            <div
+              className="form-wrapper"
+            >
+              <label
+                htmlFor="longitude"
+              >
+                Longitude
+              </label>
+              <input
+                className="form-element"
+                id="longitude"
+                name="longitude"
+                required={true}
+                type="tel"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="btn-wrapper max-width-800"
+      >
+        <button
+          className="btn-brand btn-250 btn-submit"
+          disabled={true}
+          type="submit"
+        >
+          <span>
+            Submit Report
+          </span>
+          <img
+            alt="loading"
+            src={Object {}}
+            width="12"
+          />
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+`;
+
+exports[`<CreateReport> should render without crashing for intervention report 1`] = `
+<section
+  className="login-wrapper top-space account-wrapper"
+  data-pg-name="Dashboard"
+>
+  <section
+    className="heading"
+  >
+    <div
+      className="wrapper"
+      data-pg-name="Wrapper"
+    >
+      <div
+        className="max-width-800"
+      >
+        <div
+          className="bread"
+        >
+          <h1>
+            Report an Incident
+          </h1>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div
+    className="wrapper"
+    data-pg-name="Wrapper"
+  >
+    <form
+      noValidate={true}
+      onSubmit={[MockFunction]}
+    >
+      <div
+        className="report-item card card-sm max-width-800 create-report-details"
+      >
+        <div
+          className="form-wrapper"
+        >
+          <label
+            htmlFor="title"
+          >
+            Title 
+          </label>
+          <small
+            className="text-helper"
+          >
+            (e.g Power outage for over 3 weeks around Aba market)
+          </small>
+          <input
+            className="form-element"
+            id="title"
+            name="title"
+            required={true}
+            type="text"
+          />
+        </div>
+        <div
+          className="form-wrapper no-margin-btm"
+        >
+          <label
+            htmlFor="comments"
+          >
+            Comment
+          </label>
+          <small
+            className="text-helper"
+          >
+            (Write full details here)
+          </small>
+          <textarea
+            className="form-element"
+            id="comments"
+            name="comment"
+            required={true}
+          />
+        </div>
+      </div>
+      <div
+        className="report-item card card-sm max-width-800 create-report-details padding-zero-btm"
+      >
+        <h2
+          className="report-box-title"
+        >
+          Report Type
+        </h2>
+        <p>
+          Is this incident linked to corruption or just an issue that needs government intervention ?
+        </p>
+        <div
+          className="row"
+          data-pg-name="Row"
+        >
+          <div
+            className="column column-md-6"
+            data-pg-name="Column"
+          >
+            <div
+              className="report-item max-width-800 report-box card no-margin-btm"
+              title="Red Flag Report"
+            >
+              <h4>
+                Corruption case
+                 
+                <i
+                  className="fa fa-flag flag"
+                  title="Red Flag Report"
+                />
+              </h4>
+              <p>
+                e.g. bribery, extortion, money laundering, e.t.c
+              </p>
+              <input
+                className="radio-fine"
+                data-pg-hidden={true}
+                defaultChecked={true}
+                defaultValue="red-flag"
+                name="type"
+                type="radio"
+              />
+              <div
+                className="pg-empty-placeholder radio-mark"
+              />
+            </div>
+          </div>
+          <div
+            className="column column-md-6"
+            data-pg-name="Column"
+          >
+            <div
+              className="report-item max-width-800 report-box card"
+              title="Intervention Report"
+            >
+              <h4>
+                Intervention Case
+                 
+                <i
+                  className="fa flag fa-bullhorn flag-intervention"
+                  title="Intervention Report"
+                />
+              </h4>
+              <p>
+                e.g. bad road, collapsed bridge, flooding, e.t.c
+              </p>
+              <input
+                className="radio-fine"
+                data-pg-hidden={true}
+                defaultChecked={true}
+                defaultValue="intervention"
+                name="type"
+                type="radio"
+              />
+              <div
+                className="pg-empty-placeholder radio-mark"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="report-item card card-sm max-width-800 create-report-details padding-zero-btm"
+      >
+        <header
+          className="header-create"
+        >
+          <h2
+            className="report-box-title"
+          >
+            Location
+          </h2>
+          <p>
+            Where did this happen? Enter the latitude/longitude. You can use
+             
+            <Link
+              replace={false}
+              target="_blank"
+              to="https://maps.google.com"
+            >
+              <strong>
+                <ins>
+                  Google Map
+                </ins>
+              </strong>
+            </Link>
+             
+            for help.
+          </p>
+          <p
+            className="hidden"
+          >
+            Where did this happen? Enter the latitude/longitude or simply use the marker to choose a location from the map
+          </p>
+        </header>
+        <div
+          className="row"
+          data-pg-name="Row"
+        >
+          <div
+            className="column-md-6 column column-xs-6"
+            data-pg-name="column-md-6"
+          >
+            <div
+              className="form-wrapper"
+            >
+              <label
+                htmlFor="latitude"
+              >
+                Latitude
+              </label>
+              <input
+                className="form-element"
+                id="latitude"
+                name="latitude"
+                required={true}
+                type="tel"
+              />
+            </div>
+          </div>
+          <div
+            className="column-md-6 column column-xs-6"
+            data-pg-name="column-md-6"
+          >
+            <div
+              className="form-wrapper"
+            >
+              <label
+                htmlFor="longitude"
+              >
+                Longitude
+              </label>
+              <input
+                className="form-element"
+                id="longitude"
+                name="longitude"
+                required={true}
+                type="tel"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="btn-wrapper max-width-800"
+      >
+        <button
+          className="btn-brand btn-250 btn-submit"
+          disabled={false}
+          type="submit"
+        >
+          <span>
+            Submit Report
+          </span>
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+`;
+
+exports[`<CreateReport> should render without crashing for red-flag report 1`] = `
+<section
+  className="login-wrapper top-space account-wrapper"
+  data-pg-name="Dashboard"
+>
+  <section
+    className="heading"
+  >
+    <div
+      className="wrapper"
+      data-pg-name="Wrapper"
+    >
+      <div
+        className="max-width-800"
+      >
+        <div
+          className="bread"
+        >
+          <h1>
+            Report an Incident
+          </h1>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div
+    className="wrapper"
+    data-pg-name="Wrapper"
+  >
+    <form
+      noValidate={true}
+      onSubmit={[MockFunction]}
+    >
+      <div
+        className="report-item card card-sm max-width-800 create-report-details"
+      >
+        <div
+          className="form-wrapper"
+        >
+          <label
+            htmlFor="title"
+          >
+            Title 
+          </label>
+          <small
+            className="text-helper"
+          >
+            (e.g Power outage for over 3 weeks around Aba market)
+          </small>
+          <input
+            className="form-element"
+            id="title"
+            name="title"
+            required={true}
+            type="text"
+          />
+        </div>
+        <div
+          className="form-wrapper no-margin-btm"
+        >
+          <label
+            htmlFor="comments"
+          >
+            Comment
+          </label>
+          <small
+            className="text-helper"
+          >
+            (Write full details here)
+          </small>
+          <textarea
+            className="form-element"
+            id="comments"
+            name="comment"
+            required={true}
+          />
+        </div>
+      </div>
+      <div
+        className="report-item card card-sm max-width-800 create-report-details padding-zero-btm"
+      >
+        <h2
+          className="report-box-title"
+        >
+          Report Type
+        </h2>
+        <p>
+          Is this incident linked to corruption or just an issue that needs government intervention ?
+        </p>
+        <div
+          className="row"
+          data-pg-name="Row"
+        >
+          <div
+            className="column column-md-6"
+            data-pg-name="Column"
+          >
+            <div
+              className="report-item max-width-800 report-box card no-margin-btm"
+              title="Red Flag Report"
+            >
+              <h4>
+                Corruption case
+                 
+                <i
+                  className="fa fa-flag flag"
+                  title="Red Flag Report"
+                />
+              </h4>
+              <p>
+                e.g. bribery, extortion, money laundering, e.t.c
+              </p>
+              <input
+                className="radio-fine"
+                data-pg-hidden={true}
+                defaultChecked={true}
+                defaultValue="red-flag"
+                name="type"
+                type="radio"
+              />
+              <div
+                className="pg-empty-placeholder radio-mark"
+              />
+            </div>
+          </div>
+          <div
+            className="column column-md-6"
+            data-pg-name="Column"
+          >
+            <div
+              className="report-item max-width-800 report-box card"
+              title="Intervention Report"
+            >
+              <h4>
+                Intervention Case
+                 
+                <i
+                  className="fa flag fa-bullhorn flag-intervention"
+                  title="Intervention Report"
+                />
+              </h4>
+              <p>
+                e.g. bad road, collapsed bridge, flooding, e.t.c
+              </p>
+              <input
+                className="radio-fine"
+                data-pg-hidden={true}
+                defaultChecked={false}
+                defaultValue="intervention"
+                name="type"
+                type="radio"
+              />
+              <div
+                className="pg-empty-placeholder radio-mark"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="report-item card card-sm max-width-800 create-report-details padding-zero-btm"
+      >
+        <header
+          className="header-create"
+        >
+          <h2
+            className="report-box-title"
+          >
+            Location
+          </h2>
+          <p>
+            Where did this happen? Enter the latitude/longitude. You can use
+             
+            <Link
+              replace={false}
+              target="_blank"
+              to="https://maps.google.com"
+            >
+              <strong>
+                <ins>
+                  Google Map
+                </ins>
+              </strong>
+            </Link>
+             
+            for help.
+          </p>
+          <p
+            className="hidden"
+          >
+            Where did this happen? Enter the latitude/longitude or simply use the marker to choose a location from the map
+          </p>
+        </header>
+        <div
+          className="row"
+          data-pg-name="Row"
+        >
+          <div
+            className="column-md-6 column column-xs-6"
+            data-pg-name="column-md-6"
+          >
+            <div
+              className="form-wrapper"
+            >
+              <label
+                htmlFor="latitude"
+              >
+                Latitude
+              </label>
+              <input
+                className="form-element"
+                id="latitude"
+                name="latitude"
+                required={true}
+                type="tel"
+              />
+            </div>
+          </div>
+          <div
+            className="column-md-6 column column-xs-6"
+            data-pg-name="column-md-6"
+          >
+            <div
+              className="form-wrapper"
+            >
+              <label
+                htmlFor="longitude"
+              >
+                Longitude
+              </label>
+              <input
+                className="form-element"
+                id="longitude"
+                name="longitude"
+                required={true}
+                type="tel"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="btn-wrapper max-width-800"
+      >
+        <button
+          className="btn-brand btn-250 btn-submit"
+          disabled={false}
+          type="submit"
+        >
+          <span>
+            Submit Report
+          </span>
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+`;
+
+exports[`<CreateReport> should render without crashing for successful report 1`] = `
+<section
+  className="login-wrapper top-space account-wrapper"
+  data-pg-name="Dashboard"
+>
+  <section
+    className="heading"
+  >
+    <div
+      className="wrapper"
+      data-pg-name="Wrapper"
+    >
+      <div
+        className="max-width-800"
+      >
+        <div
+          className="bread"
+        >
+          <h1>
+            Report an Incident
+          </h1>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div
+    className="wrapper"
+    data-pg-name="Wrapper"
+  >
+    <form
+      noValidate={true}
+      onSubmit={[MockFunction]}
+    >
+      <Alert
+        message={
+          Array [
+            "successful",
+          ]
+        }
+        success={true}
+        title="Report Successful!"
+      />
+      <div
+        className="report-item card card-sm max-width-800 create-report-details"
+      >
+        <div
+          className="form-wrapper"
+        >
+          <label
+            htmlFor="title"
+          >
+            Title 
+          </label>
+          <small
+            className="text-helper"
+          >
+            (e.g Power outage for over 3 weeks around Aba market)
+          </small>
+          <input
+            className="form-element"
+            id="title"
+            name="title"
+            required={true}
+            type="text"
+          />
+        </div>
+        <div
+          className="form-wrapper no-margin-btm"
+        >
+          <label
+            htmlFor="comments"
+          >
+            Comment
+          </label>
+          <small
+            className="text-helper"
+          >
+            (Write full details here)
+          </small>
+          <textarea
+            className="form-element"
+            id="comments"
+            name="comment"
+            required={true}
+          />
+        </div>
+      </div>
+      <div
+        className="report-item card card-sm max-width-800 create-report-details padding-zero-btm"
+      >
+        <h2
+          className="report-box-title"
+        >
+          Report Type
+        </h2>
+        <p>
+          Is this incident linked to corruption or just an issue that needs government intervention ?
+        </p>
+        <div
+          className="row"
+          data-pg-name="Row"
+        >
+          <div
+            className="column column-md-6"
+            data-pg-name="Column"
+          >
+            <div
+              className="report-item max-width-800 report-box card no-margin-btm"
+              title="Red Flag Report"
+            >
+              <h4>
+                Corruption case
+                 
+                <i
+                  className="fa fa-flag flag"
+                  title="Red Flag Report"
+                />
+              </h4>
+              <p>
+                e.g. bribery, extortion, money laundering, e.t.c
+              </p>
+              <input
+                className="radio-fine"
+                data-pg-hidden={true}
+                defaultChecked={true}
+                defaultValue="red-flag"
+                name="type"
+                type="radio"
+              />
+              <div
+                className="pg-empty-placeholder radio-mark"
+              />
+            </div>
+          </div>
+          <div
+            className="column column-md-6"
+            data-pg-name="Column"
+          >
+            <div
+              className="report-item max-width-800 report-box card"
+              title="Intervention Report"
+            >
+              <h4>
+                Intervention Case
+                 
+                <i
+                  className="fa flag fa-bullhorn flag-intervention"
+                  title="Intervention Report"
+                />
+              </h4>
+              <p>
+                e.g. bad road, collapsed bridge, flooding, e.t.c
+              </p>
+              <input
+                className="radio-fine"
+                data-pg-hidden={true}
+                defaultChecked={true}
+                defaultValue="intervention"
+                name="type"
+                type="radio"
+              />
+              <div
+                className="pg-empty-placeholder radio-mark"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="report-item card card-sm max-width-800 create-report-details padding-zero-btm"
+      >
+        <header
+          className="header-create"
+        >
+          <h2
+            className="report-box-title"
+          >
+            Location
+          </h2>
+          <p>
+            Where did this happen? Enter the latitude/longitude. You can use
+             
+            <Link
+              replace={false}
+              target="_blank"
+              to="https://maps.google.com"
+            >
+              <strong>
+                <ins>
+                  Google Map
+                </ins>
+              </strong>
+            </Link>
+             
+            for help.
+          </p>
+          <p
+            className="hidden"
+          >
+            Where did this happen? Enter the latitude/longitude or simply use the marker to choose a location from the map
+          </p>
+        </header>
+        <div
+          className="row"
+          data-pg-name="Row"
+        >
+          <div
+            className="column-md-6 column column-xs-6"
+            data-pg-name="column-md-6"
+          >
+            <div
+              className="form-wrapper"
+            >
+              <label
+                htmlFor="latitude"
+              >
+                Latitude
+              </label>
+              <input
+                className="form-element"
+                id="latitude"
+                name="latitude"
+                required={true}
+                type="tel"
+              />
+            </div>
+          </div>
+          <div
+            className="column-md-6 column column-xs-6"
+            data-pg-name="column-md-6"
+          >
+            <div
+              className="form-wrapper"
+            >
+              <label
+                htmlFor="longitude"
+              >
+                Longitude
+              </label>
+              <input
+                className="form-element"
+                id="longitude"
+                name="longitude"
+                required={true}
+                type="tel"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="btn-wrapper max-width-800"
+      >
+        <button
+          className="btn-brand btn-250 btn-submit"
+          disabled={false}
+          type="submit"
+        >
+          <span>
+            Submit Report
+          </span>
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+`;

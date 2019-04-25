@@ -13,6 +13,9 @@ export const mockState = {
     isBusy: false,
     message: [],
     success: false
+  },
+  report: {
+    message: []
   }
 };
 

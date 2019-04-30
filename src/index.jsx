@@ -35,6 +35,7 @@ function App() {
               <Route path="/sign-up" component={SignupContainer} exact />
               <Route path="/profile" component={ProfileContainer} exact />
               <Route path="/create-report" component={CreateReportContainer} exact />
+              <Route path="/create-report/:reportType/:reportId" component={CreateReportContainer} exact />
             </Switch>
             <Footer />
           </>

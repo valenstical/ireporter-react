@@ -27,14 +27,14 @@ export default function CreateReport({ handleSubmit, report }) {
             <div className="form-wrapper">
               <label htmlFor="title">Title </label>
               <small className="text-helper">(e.g Power outage for over 3 weeks around Aba market)</small>
-              <input id="title" className="form-element" type="text" name="title" required defaultValue={report.title} />
+              <input id="title" className="form-element" type="text" name="title" required />
             </div>
             <div className="form-wrapper no-margin-btm">
               <label htmlFor="comments">
 Comment
               </label>
               <small className="text-helper">(Write full details here)</small>
-              <textarea id="comments" className="form-element" name="comment" required defaultValue={report.comment} />
+              <textarea id="comments" className="form-element" name="comment" required />
             </div>
           </div>
           <div className="report-item card card-sm max-width-800 create-report-details padding-zero-btm">
@@ -53,7 +53,7 @@ Corruption case
                     <i className="fa fa-flag flag" title="Red Flag Report" />
                   </h4>
                   <p>e.g. bribery, extortion, money laundering, e.t.c</p>
-                  <input type="radio" name="type" defaultValue="red-flag" data-pg-hidden className="radio-fine" defaultChecked />
+                  <input type="radio" name="type" defaultValue="red-flag" data-pg-hidden className="radio-fine" checked />
                   <div className="pg-empty-placeholder radio-mark" />
                 </div>
               </div>
@@ -65,7 +65,7 @@ Intervention Case
                     <i className="fa flag fa-bullhorn flag-intervention" title="Intervention Report" />
                   </h4>
                   <p>e.g. bad road, collapsed bridge, flooding, e.t.c</p>
-                  <input type="radio" name="type" defaultValue="intervention" className="radio-fine" data-pg-hidden defaultChecked={report.type === 'intervention'} />
+                  <input type="radio" name="type" defaultValue="intervention" className="radio-fine" data-pg-hidden />
                   <div className="pg-empty-placeholder radio-mark" />
                 </div>
               </div>

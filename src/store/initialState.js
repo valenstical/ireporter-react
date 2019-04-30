@@ -9,5 +9,7 @@ export default {
     message: [],
     isBusy: false,
     success: false,
+    isFetching: false,
+    redirect: false,
   }
 };

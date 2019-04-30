@@ -1,4 +1,4 @@
-import { createReportTypes } from '../actions/reportAction';
+import { createReportTypes, getReportTypes } from '../actions/reportAction';
 
 /**
  * A reducer that formats the data before updating the redux store with the new state
@@ -21,6 +21,12 @@ export default (state = {}, action) => {
       return {
         ...state, isBusy: false, message: data, success: false
       };
+    case getReportTypes.loading:
+      return { ...state, isFetching: true };
+    case getReportTypes.success:
+      return { ...state, isFetching: false, ...data };
+    case getReportTypes.failure:
+      return { ...state, isFetching: false, redirect: true };
     default:
       return state;
   }

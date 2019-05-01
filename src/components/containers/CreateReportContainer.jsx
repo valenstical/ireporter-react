@@ -4,7 +4,7 @@ import formDataJSON from 'formdata-json';
 import PropTypes from 'prop-types';
 import { createStructuredSelector } from 'reselect';
 import { Redirect } from 'react-router-dom';
-import { getUser, getReport } from '../../selectors';
+import { getUser, getCreatedReport } from '../../selectors';
 import { scrollTop } from '../../utils/helpers';
 import CreateReport from '../views/CreateReport';
 import reportIncident from '../../actions/reportAction';
@@ -20,8 +20,6 @@ class CreateReportContainer extends Component {
   handleSubmit = async (event) => {
     event.preventDefault();
     const payload = formDataJSON(new FormData(event.target));
-    payload.route = `${payload.type}s`;
-    payload.method = payload.id ? 'patch' : 'post';
     payload.location = `${payload.latitude},${payload.longitude}`;
     const { reportIncident: processReportIncident } = this.props;
     await processReportIncident(payload);
@@ -49,7 +47,7 @@ CreateReportContainer.propTypes = {
 const mapStateToProps = createStructuredSelector(
   {
     user: getUser,
-    report: getReport
+    report: getCreatedReport
   }
 );
 

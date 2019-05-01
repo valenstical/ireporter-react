@@ -1,5 +1,4 @@
-import '@babel/polyfill';
-import authenticate, { authTypes, authAction } from '../../src/actions/authAction';
+import authenticate, { authTypes } from '../../src/actions/authAction';
 import { createMockStore } from '../setup';
 import request from '../../src/utils/request';
 
@@ -8,13 +7,6 @@ const mockStore = createMockStore();
 jest.mock('../../src/utils/request');
 
 describe('Auth Action creators', () => {
-  it('should return an object of the auth action types', () => {
-    const expected = {
-      type: authTypes.loading,
-      data: true,
-    };
-    expect(authAction(authTypes.loading, true)).toEqual(expected);
-  });
   it('should return the correct value on successful authentication', () => {
     const response = { token: '', user: { firstname: 'john' } };
     const expected = [

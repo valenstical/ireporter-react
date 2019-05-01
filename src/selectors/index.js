@@ -5,11 +5,13 @@ import { createSelector } from 'reselect';
  * @param {object} state A reference to the state in the redux store
  */
 export const userSelector = state => state.user;
-export const createReport = state => state.report;
+export const createReportSelector = state => state.createReport;
+export const getReportSelector = state => state.report;
 
 
 /**
  * Selectors created by the reselect library for memoized functions
  */
 export const getUser = createSelector(userSelector, user => user);
-export const getReport = createSelector(createReport, report => report);
+export const getReport = createSelector(getReportSelector, report => report);
+export const getCreatedReport = createSelector(createReportSelector, report => report);

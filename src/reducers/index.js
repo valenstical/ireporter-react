@@ -1,10 +1,13 @@
 import { combineReducers } from 'redux';
 import authReducer from './authReducer';
-import reportReducer from './createReportReducer';
+import { createReportReducer, getReportReducer } from './reportsReducer';
+
+
 /**
  * @function combineReducers - the redux store combineReducers function
  */
 export default combineReducers({
   user: authReducer,
-  report: reportReducer,
+  createReport: createReportReducer,
+  report: getReportReducer,
 });

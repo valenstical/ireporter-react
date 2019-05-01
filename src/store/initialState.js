@@ -5,9 +5,15 @@ export default {
     success: false,
     isLoggedIn: false,
   },
-  report: {
+  createReport: {
     message: [],
     isBusy: false,
     success: false,
+  },
+  report: {
+    data: [],
+    isBusy: false,
+    success: false,
+    redirect: false,
   }
 };

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import ReactDOM from 'react-dom';
+import { ToastContainer, Flip } from 'react-toastify';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { PersistGate } from 'redux-persist/lib/integration/react';
 import reduxStore from './store';
@@ -14,6 +15,7 @@ import LoginContainer from './components/containers/LoginContainer';
 import SignupContainer from './components/containers/SignupContainer';
 import ProfileContainer from './components/containers/ProfileContainer';
 import CreateReportContainer from './components/containers/CreateReportContainer';
+import EditReportContainer from './components/containers/EditReportContainer';
 
 const { store, persistor } = reduxStore;
 
@@ -35,7 +37,18 @@ function App() {
               <Route path="/sign-up" component={SignupContainer} exact />
               <Route path="/profile" component={ProfileContainer} exact />
               <Route path="/create-report" component={CreateReportContainer} exact />
+              <Route path="/edit-report/:type/:id" component={EditReportContainer} exact />
+              <Route path="*" component={Landing} />
             </Switch>
+            <ToastContainer
+          pauseOnFocusLoss={false}
+          transition={Flip}
+          className="toast-container"
+          toastClassName="default-toast"
+          hideProgressBar
+          autoClose={5000}
+          position="top-right"
+        />
             <Footer />
           </>
         </BrowserRouter>

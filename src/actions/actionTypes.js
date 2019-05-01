@@ -9,4 +9,12 @@ const typeGenerator = name => ({
   failure: `${name}_FAILURE`,
 });
 
+/**
+ * Reusable action creator
+ * @param {string} type The action type
+ * @param {object} data The data to dispatch
+ */
+export const action = (type, data) => ({ type, data });
+
+
 export default typeGenerator;

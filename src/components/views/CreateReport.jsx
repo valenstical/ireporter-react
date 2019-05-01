@@ -21,9 +21,9 @@ export default function CreateReport({ handleSubmit, report }) {
         </div>
       </section>
       <div className="wrapper" data-pg-name="Wrapper">
-        <form onSubmit={handleSubmit} noValidate>
+        <form onSubmit={handleSubmit} noValidate className="max-width-800">
           {report.message.length > 0 && <Alert message={report.message} title={report.success ? 'Report Successful!' : 'Oops!'} success={report.success} />}
-          <div className="report-item card card-sm max-width-800 create-report-details">
+          <div className="report-item card card-sm create-report-details">
             <div className="form-wrapper">
               <label htmlFor="title">Title </label>
               <small className="text-helper">(e.g Power outage for over 3 weeks around Aba market)</small>
@@ -37,7 +37,7 @@ Comment
               <textarea id="comments" className="form-element" name="comment" required defaultValue={report.comment} />
             </div>
           </div>
-          <div className="report-item card card-sm max-width-800 create-report-details padding-zero-btm">
+          <div className="report-item card card-sm create-report-details padding-zero-btm">
             <h2 className="report-box-title">Report Type</h2>
             <p>
 Is this incident linked to corruption or
@@ -46,7 +46,7 @@ Is this incident linked to corruption or
             </p>
             <div className="row" data-pg-name="Row">
               <div className="column column-md-6" data-pg-name="Column">
-                <div className="report-item max-width-800 report-box card no-margin-btm" title="Red Flag Report">
+                <div className="report-item report-box card no-margin-btm" title="Red Flag Report">
                   <h4>
 Corruption case
                     {' '}
@@ -58,7 +58,7 @@ Corruption case
                 </div>
               </div>
               <div className="column column-md-6" data-pg-name="Column">
-                <div className="report-item max-width-800 report-box card" title="Intervention Report">
+                <div className="report-item report-box card" title="Intervention Report">
                   <h4>
 Intervention Case
                     {' '}
@@ -98,7 +98,7 @@ for help.
               </div>
             </div>
           </div>
-          <div className="btn-wrapper max-width-800">
+          <div className="btn-wrapper">
             <button disabled={report.isBusy} className="btn-brand btn-250 btn-submit" type="submit">
               <span>Submit Report</span>
               { report.isBusy && <img src={loadingIcon} width="12" alt="loading" />}

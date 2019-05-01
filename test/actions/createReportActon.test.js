@@ -1,5 +1,4 @@
-import '@babel/polyfill';
-import reportIncident, { createReportTypes, createReportAction } from '../../src/actions/reportAction';
+import reportIncident, { createReportTypes } from '../../src/actions/reportAction';
 import { createMockStore } from '../setup';
 import request from '../../src/utils/request';
 
@@ -8,13 +7,6 @@ const mockStore = createMockStore();
 jest.mock('../../src/utils/request');
 
 describe('Create report Action creators', () => {
-  it('should return an object of the create article action types', () => {
-    const expected = {
-      type: createReportTypes.loading,
-      data: true,
-    };
-    expect(createReportAction(createReportTypes.loading, true)).toEqual(expected);
-  });
   it('should return the correct value on successful create report request', () => {
     const response = { message: 'successful' };
     const expected = [

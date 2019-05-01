@@ -14,9 +14,17 @@ export const mockState = {
     message: [],
     success: false
   },
+  createReport: {
+    message: [],
+    isBusy: false,
+    success: false,
+  },
   report: {
-    message: []
-  }
+    data: [],
+    isBusy: false,
+    success: false,
+    redirect: false,
+  },
 };
 
 export const createMockStore = () => {

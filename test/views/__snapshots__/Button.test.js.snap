@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button> should render without crashing when active 1`] = `
+<div
+  className="btn-wrapper"
+>
+  <button
+    className="btn-brand btn-submit"
+    type="submit"
+  >
+    <span>
+      Submit
+    </span>
+    <img
+      alt="loading"
+      src={Object {}}
+      width="12"
+    />
+  </button>
+  <input
+    defaultValue=""
+    name="route"
+    type="hidden"
+  />
+</div>
+`;
+
+exports[`<Button> should render without crashing when not active 1`] = `
+<div
+  className="btn-wrapper"
+>
+  <button
+    className="btn-brand btn-submit"
+    type="submit"
+  >
+    <span>
+      Submit
+    </span>
+  </button>
+  <input
+    defaultValue=""
+    name="route"
+    type="hidden"
+  />
+</div>
+`;

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<CreateReportContainer> should render without crashing 1`] = `
+exports[`<EditReportContainer> should render without crashing 1`] = `
 <Provider
   store={
     Object {
@@ -38,16 +38,29 @@ exports[`<CreateReportContainer> should render without crashing 1`] = `
         }
       }
     >
-      <Connect(CreateReportContainer)>
-        <CreateReportContainer
+      <Connect(EditReportContainer)
+        location={
+          Object {
+            "pathname": "/path/type/1",
+          }
+        }
+      >
+        <EditReportContainer
+          fetchReports={[Function]}
+          location={
+            Object {
+              "pathname": "/path/type/1",
+            }
+          }
           report={
             Object {
+              "data": Array [],
               "isBusy": false,
-              "message": Array [],
+              "redirect": false,
               "success": false,
             }
           }
-          reportIncident={[Function]}
+          updateReport={[Function]}
           user={
             Object {
               "isBusy": false,
@@ -60,8 +73,8 @@ exports[`<CreateReportContainer> should render without crashing 1`] = `
             push={false}
             to="/login"
           />
-        </CreateReportContainer>
-      </Connect(CreateReportContainer)>
+        </EditReportContainer>
+      </Connect(EditReportContainer)>
     </Router>
   </BrowserRouter>
 </Provider>

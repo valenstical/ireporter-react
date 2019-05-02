@@ -1,0 +1,675 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<UserDashboardContainer> should render without crashing 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <BrowserRouter
+    keyLength={0}
+  >
+    <Router
+      history={
+        Object {
+          "action": "REPLACE",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/login",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Connect(UserDashboardContainer)>
+        <UserDashboardContainer
+          fetchReports={[Function]}
+          reports={
+            Object {
+              "data": Array [],
+              "isBusy": false,
+              "success": false,
+            }
+          }
+          summary={
+            Object {
+              "investigating": 0,
+              "pending": 0,
+              "rejected": 0,
+              "resolved": 0,
+            }
+          }
+          user={
+            Object {
+              "isBusy": false,
+              "message": Array [],
+              "success": false,
+            }
+          }
+        >
+          <Redirect
+            push={false}
+            to="/login"
+          />
+        </UserDashboardContainer>
+      </Connect(UserDashboardContainer)>
+    </Router>
+  </BrowserRouter>
+</Provider>
+`;
+
+exports[`<UserDashboardContainer> should render without crashing when user is logged in 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <BrowserRouter
+    keyLength={0}
+  >
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/login",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Connect(UserDashboardContainer)>
+        <UserDashboardContainer
+          fetchReports={[Function]}
+          reports={
+            Object {
+              "data": Array [],
+              "isBusy": false,
+              "success": false,
+            }
+          }
+          summary={
+            Object {
+              "investigating": 0,
+              "pending": 0,
+              "rejected": 0,
+              "resolved": 0,
+            }
+          }
+          user={
+            Object {
+              "isBusy": false,
+              "isLoggedIn": true,
+              "message": Array [],
+              "success": false,
+            }
+          }
+        >
+          <UserDashboard
+            active=""
+            handleGetReports={[Function]}
+            reports={
+              Object {
+                "data": Array [],
+                "isBusy": false,
+                "success": false,
+              }
+            }
+            summary={
+              Object {
+                "investigating": 0,
+                "pending": 0,
+                "rejected": 0,
+                "resolved": 0,
+              }
+            }
+          >
+            <main
+              className="login-wrapper top-space account-wrapper relative bg-grey false"
+            >
+              <section
+                className="tab-pane heading"
+              >
+                <div
+                  className="wrapper"
+                >
+                  <div
+                    className="tab"
+                  >
+                    <button
+                      className="tranistion active"
+                      onClick={[Function]}
+                      type="button"
+                      value=""
+                    >
+                      All
+                    </button>
+                    <button
+                      className="tranistion false"
+                      onClick={[Function]}
+                      type="button"
+                      value="red-flag"
+                    >
+                      Red Flags
+                    </button>
+                    <button
+                      className="tranistion false"
+                      onClick={[Function]}
+                      type="button"
+                      value="intervention"
+                    >
+                      Interventions
+                    </button>
+                  </div>
+                </div>
+              </section>
+              <section
+                className="profile-page fill-viewport"
+              >
+                <div
+                  className="wrapper"
+                >
+                  <EmptyDashboard
+                    reportType=""
+                  >
+                    <div
+                      className="empty-result text-center"
+                    >
+                      <img
+                        alt="no reports"
+                        src={Object {}}
+                        width={350}
+                      />
+                      <h4>
+                        You don't have any
+                         
+                         
+                        <strong />
+                         
+                        reports yet.
+                      </h4>
+                      <Link
+                        className="btn-brand"
+                        replace={false}
+                        to="/create-report"
+                      >
+                        <a
+                          className="btn-brand"
+                          href="/create-report"
+                          onClick={[Function]}
+                        >
+                          Get Started Now
+                          <i
+                            className="fa fa-chevron-right fa-pull-right"
+                          />
+                        </a>
+                      </Link>
+                    </div>
+                  </EmptyDashboard>
+                </div>
+              </section>
+              <Link
+                className="btn-brand btn-floating"
+                replace={false}
+                title="Create a new report"
+                to="/create-report"
+              >
+                <a
+                  className="btn-brand btn-floating"
+                  href="/create-report"
+                  onClick={[Function]}
+                  title="Create a new report"
+                >
+                  <i
+                    className="fa fa-plus transition"
+                  />
+                </a>
+              </Link>
+              <Loader>
+                <div
+                  className="overlay-fetching"
+                >
+                  <img
+                    alt="busy icon"
+                    src={Object {}}
+                  />
+                </div>
+              </Loader>
+            </main>
+          </UserDashboard>
+        </UserDashboardContainer>
+      </Connect(UserDashboardContainer)>
+    </Router>
+  </BrowserRouter>
+</Provider>
+`;
+
+exports[`<UserDashboardContainer> should render without crashing when with data 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <BrowserRouter
+    keyLength={0}
+  >
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/login",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Connect(UserDashboardContainer)>
+        <UserDashboardContainer
+          fetchReports={[Function]}
+          reports={
+            Object {
+              "data": Array [
+                Object {
+                  "status": "draft",
+                },
+              ],
+              "isBusy": false,
+              "success": false,
+            }
+          }
+          summary={
+            Object {
+              "investigating": 0,
+              "pending": 0,
+              "rejected": 0,
+              "resolved": 0,
+            }
+          }
+          user={
+            Object {
+              "isBusy": false,
+              "isLoggedIn": true,
+              "message": Array [],
+              "success": false,
+            }
+          }
+        >
+          <UserDashboard
+            active=""
+            handleGetReports={[Function]}
+            reports={
+              Object {
+                "data": Array [
+                  Object {
+                    "status": "draft",
+                  },
+                ],
+                "isBusy": false,
+                "success": false,
+              }
+            }
+            summary={
+              Object {
+                "investigating": 0,
+                "pending": 0,
+                "rejected": 0,
+                "resolved": 0,
+              }
+            }
+          >
+            <main
+              className="login-wrapper top-space account-wrapper relative bg-grey false"
+            >
+              <section
+                className="tab-pane heading"
+              >
+                <div
+                  className="wrapper"
+                >
+                  <div
+                    className="tab"
+                  >
+                    <button
+                      className="tranistion active"
+                      onClick={[Function]}
+                      type="button"
+                      value=""
+                    >
+                      All
+                    </button>
+                    <button
+                      className="tranistion false"
+                      onClick={[Function]}
+                      type="button"
+                      value="red-flag"
+                    >
+                      Red Flags
+                    </button>
+                    <button
+                      className="tranistion false"
+                      onClick={[Function]}
+                      type="button"
+                      value="intervention"
+                    >
+                      Interventions
+                    </button>
+                  </div>
+                </div>
+              </section>
+              <section
+                className="profile-page fill-viewport"
+              >
+                <div
+                  className="wrapper"
+                >
+                  <SummaryBox
+                    summary={
+                      Object {
+                        "investigating": 0,
+                        "pending": 0,
+                        "rejected": 0,
+                        "resolved": 0,
+                      }
+                    }
+                  >
+                    <header
+                      className="page-title"
+                    >
+                      <div
+                        className="row"
+                        data-pg-name="Row"
+                      >
+                        <div
+                          className="column column-xs-3"
+                          data-pg-collapsed={true}
+                          data-pg-name="Column"
+                        >
+                          <div
+                            className="card card-sm summary"
+                          >
+                            <i
+                              className="fa fa-file-text-o bg-status-draft"
+                            />
+                            <p>
+                              <small
+                                id="pending"
+                              >
+                                0
+                              </small>
+                              <span>
+                                Pending
+                              </span>
+                            </p>
+                          </div>
+                        </div>
+                        <div
+                          className="column column-xs-3"
+                          data-pg-collapsed={true}
+                          data-pg-name="Column"
+                        >
+                          <div
+                            className="card card-sm summary"
+                          >
+                            <i
+                              className="fa bg-status-resolved fa-check"
+                            />
+                            <p>
+                              <small
+                                id="resolved"
+                              >
+                                0
+                              </small>
+                              <span>
+                                Resolved
+                              </span>
+                            </p>
+                          </div>
+                        </div>
+                        <div
+                          className="column column-xs-3"
+                          data-pg-collapsed={true}
+                          data-pg-name="Column"
+                        >
+                          <div
+                            className="card card-sm summary"
+                          >
+                            <i
+                              className="fa bg-status-rejected fa-remove"
+                            />
+                            <p>
+                              <small
+                                id="rejected"
+                              >
+                                0
+                              </small>
+                              <span>
+                                Rejected
+                              </span>
+                            </p>
+                          </div>
+                        </div>
+                        <div
+                          className="column column-xs-3"
+                          data-pg-collapsed={true}
+                          data-pg-name="Column"
+                        >
+                          <div
+                            className="card card-sm summary"
+                          >
+                            <i
+                              className="fa bg-status-pending fa-info"
+                            />
+                            <p>
+                              <small
+                                id="investigating"
+                              >
+                                0
+                              </small>
+                              <span
+                                title="Investigating"
+                              >
+                                Investigating
+                              </span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </header>
+                  </SummaryBox>
+                  <section
+                    className="reports-wrapper"
+                  >
+                    <header
+                      className="header"
+                    >
+                      <small
+                        className="round-info"
+                      >
+                        Found 1  reports
+                      </small>
+                    </header>
+                    <div
+                      id="results"
+                    >
+                      <ReportCard
+                        report={
+                          Object {
+                            "status": "draft",
+                          }
+                        }
+                      >
+                        <div
+                          className="reports-column"
+                        >
+                          <div
+                            className="report-item card card-sm"
+                          >
+                            <div
+                              className="profile-img"
+                            >
+                              <div
+                                className="profile-img-reports"
+                                style={
+                                  Object {
+                                    "backgroundImage": "url(undefined)",
+                                  }
+                                }
+                              />
+                            </div>
+                            <div
+                              className="report-item-content"
+                            >
+                              <h5 />
+                              <span
+                                className="report-item-date"
+                              >
+                                <i
+                                  className="fa fa-calendar"
+                                />
+                                 
+                                NaN years ago
+                              </span>
+                              <span
+                                className="badge-citizen badge-status status-badge-draft"
+                              >
+                                <i
+                                  className="fa fa-file-text-o"
+                                />
+                                draft
+                              </span>
+                              <h6>
+                                <i
+                                  className="fa flag fa-bullhorn flag-intervention"
+                                />
+                              </h6>
+                              <p />
+                              <Link
+                                className="report-item-link"
+                                replace={false}
+                                to="/report/undefineds/undefined"
+                              >
+                                <a
+                                  className="report-item-link"
+                                  href="/report/undefineds/undefined"
+                                  onClick={[Function]}
+                                >
+                                  Details
+                                   
+                                  &gt;&gt;
+                                </a>
+                              </Link>
+                               
+                              <Link
+                                className="btn-brand btn-secondary"
+                                replace={false}
+                                to="/edit-report/undefineds/undefined"
+                              >
+                                <a
+                                  className="btn-brand btn-secondary"
+                                  href="/edit-report/undefineds/undefined"
+                                  onClick={[Function]}
+                                >
+                                  Edit
+                                   
+                                  <i
+                                    className="fa fa-edit"
+                                  />
+                                </a>
+                              </Link>
+                            </div>
+                          </div>
+                        </div>
+                      </ReportCard>
+                    </div>
+                  </section>
+                </div>
+              </section>
+              <Link
+                className="btn-brand btn-floating"
+                replace={false}
+                title="Create a new report"
+                to="/create-report"
+              >
+                <a
+                  className="btn-brand btn-floating"
+                  href="/create-report"
+                  onClick={[Function]}
+                  title="Create a new report"
+                >
+                  <i
+                    className="fa fa-plus transition"
+                  />
+                </a>
+              </Link>
+              <Loader>
+                <div
+                  className="overlay-fetching"
+                >
+                  <img
+                    alt="busy icon"
+                    src={Object {}}
+                  />
+                </div>
+              </Loader>
+            </main>
+          </UserDashboard>
+        </UserDashboardContainer>
+      </Connect(UserDashboardContainer)>
+    </Router>
+  </BrowserRouter>
+</Provider>
+`;

@@ -16,13 +16,25 @@ import updateReport from '../../actions/updateReportAction';
  * @extends {Component}
  */
 class EditReportContainer extends Component {
-  componentDidMount() {
+  state = {
+    report: {}
+  }
+
+  async componentDidMount() {
     const { location: { pathname } } = this.props;
     const pathAsArray = pathname.split('/');
     const reportType = pathAsArray[2];
     const reportId = pathAsArray[3];
     const { fetchReports: processfetchReports } = this.props;
-    if (reportType && reportId) processfetchReports(`${reportType}/${reportId}`);
+    if (reportType && reportId) await processfetchReports(`${reportType}/${reportId}`);
+    this.populateReport();
+  }
+
+  populateReport = () => {
+    const { report } = this.props;
+    this.setState({
+      report
+    });
   }
 
   handleUpdateReport = (event) => {
@@ -33,11 +45,12 @@ class EditReportContainer extends Component {
   }
 
   render() {
-    const { user, report } = this.props;
+    const { user } = this.props;
+    const { report } = this.state;
     if (!user.isLoggedIn) return <Redirect to="/login" />;
     if (report.redirect) return <Redirect to="/404" />;
     return (
-      report.data.length > 0
+      report.data
         ? (
           <EditReport
       report={report}

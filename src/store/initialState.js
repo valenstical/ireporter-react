@@ -15,5 +15,10 @@ export default {
     isBusy: false,
     success: false,
     redirect: false,
+  },
+  reports: {
+    data: [],
+    isBusy: false,
+    success: false,
   }
 };

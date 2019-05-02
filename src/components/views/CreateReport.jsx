@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import loadingIcon from '../../../public/images/resources/loader-light.gif';
 import Alert from './Alert';
@@ -77,7 +76,7 @@ Intervention Case
               <p>
 Where did this happen? Enter the latitude/longitude. You can use
                 {' '}
-                <Link to="https://maps.google.com" target="_blank"><strong><ins>Google Map</ins></strong></Link>
+                <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer"><strong><ins>Google Map</ins></strong></a>
                 {' '}
 for help.
               </p>

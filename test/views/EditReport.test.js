@@ -5,6 +5,7 @@ import EditReport from '../../src/components/views/EditReport';
 const props = {
   report: {
     data: [],
+    isBusy: false,
   },
   handleUpdateReport: jest.fn(),
 };
@@ -16,6 +17,7 @@ describe('<EditReport>', () => {
   });
   it('should render without crashing with data', () => {
     props.report.data = [{ location: '' }];
+    props.report.isBusy = true;
     const wrapper = shallow(<EditReport {...props} />);
     expect(wrapper).toMatchSnapshot();
   });

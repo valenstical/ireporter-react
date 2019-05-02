@@ -1,9 +1,8 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { PropTypes } from 'prop-types';
 import Button from './Button';
-
+import Loader from './Loader';
 
 /**
  * The footer component
@@ -15,7 +14,7 @@ export default function EditReport({ report, handleUpdateReport }) {
   const locatonAsArray = value.location.split(',');
   const [latitude, longitude] = locatonAsArray;
   return (
-    <main className="login-wrapper top-space account-wrapper">
+    <main className={`login-wrapper top-space account-wrapper ${report.isBusy ? 'busy' : ''}`}>
       <section className="heading">
         <div className="wrapper">
           <div className="bread">
@@ -113,7 +112,7 @@ for help.
         </div>
 
       </div>
-
+      <Loader />
     </main>
 
   );

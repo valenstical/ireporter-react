@@ -42,11 +42,11 @@ $ npm test
 ```
 
 ## Pivotal Tracker stories
-View the pivotal tracker stories for this project here [https://www.pivotaltracker.com/n/projects/2312744](https://www.pivotaltracker.com/projects/2227161)
+View the pivotal tracker stories for this project here [https://www.pivotaltracker.com/n/projects/2312744](https://www.pivotaltracker.com/n/projects/2312744)
 
 ## Front-end Design
 
-You can see a hosted version of the frontend at [https://ireporter-naija.herokuapp.com/](https://valenstical.github.io/ireporter/)
+You can see a hosted version of the frontend at [https://ireporter-naija.herokuapp.com/](https://ireporter-naija.herokuapp.com/)
 
 ## API
 

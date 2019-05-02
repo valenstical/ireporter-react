@@ -1,7 +1,7 @@
 import { mockState } from '../setup';
-import { createReportReducer, getReportReducer } from '../../src/reducers/reportsReducer';
+import { createReportReducer, getReportReducer, getReportsReducer } from '../../src/reducers/reportsReducer';
 import { createReportTypes } from '../../src/actions/reportAction';
-import { getReportTypes } from '../../src/actions/getReportAction';
+import { getReportTypes, getReportsTypes } from '../../src/actions/getReportAction';
 
 
 describe('Create report Reducer', () => {
@@ -49,5 +49,26 @@ describe('Get report Reducer', () => {
     expect(getReportReducer({}, action)).toEqual(
       { redirect: false, success: false, isBusy: false }
     );
+  });
+});
+
+describe('Get reports Reducer', () => {
+  it('should return the initial state', () => {
+    expect(getReportsReducer(mockState, {})).toEqual(mockState);
+  });
+  it('should return the initial state if it is not set', () => {
+    expect(getReportsReducer(undefined, {})).toEqual({});
+  });
+  it('should return the correct state when loading', () => {
+    const action = { type: getReportsTypes.loading, data: '' };
+    expect(getReportsReducer({}, action)).toEqual({ isBusy: true, active: '' });
+  });
+  it('should return the correct state on success', () => {
+    const action = { type: getReportsTypes.success, data: 'success' };
+    expect(getReportsReducer({}, action)).toEqual({ data: 'success', success: true, isBusy: false });
+  });
+  it('should return the correct state on failure', () => {
+    const action = { type: getReportsTypes.failure, data: [] };
+    expect(getReportsReducer({}, action)).toEqual({ data: [], success: false, isBusy: false });
   });
 });

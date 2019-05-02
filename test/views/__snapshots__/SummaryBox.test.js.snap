@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SummaryBox> should render without crashing when not active 1`] = `
+<header
+  className="page-title"
+>
+  <div
+    className="row"
+    data-pg-name="Row"
+  >
+    <div
+      className="column column-xs-3"
+      data-pg-collapsed={true}
+      data-pg-name="Column"
+    >
+      <div
+        className="card card-sm summary"
+      >
+        <i
+          className="fa fa-file-text-o bg-status-draft"
+        />
+        <p>
+          <small
+            id="pending"
+          />
+          <span>
+            Pending
+          </span>
+        </p>
+      </div>
+    </div>
+    <div
+      className="column column-xs-3"
+      data-pg-collapsed={true}
+      data-pg-name="Column"
+    >
+      <div
+        className="card card-sm summary"
+      >
+        <i
+          className="fa bg-status-resolved fa-check"
+        />
+        <p>
+          <small
+            id="resolved"
+          />
+          <span>
+            Resolved
+          </span>
+        </p>
+      </div>
+    </div>
+    <div
+      className="column column-xs-3"
+      data-pg-collapsed={true}
+      data-pg-name="Column"
+    >
+      <div
+        className="card card-sm summary"
+      >
+        <i
+          className="fa bg-status-rejected fa-remove"
+        />
+        <p>
+          <small
+            id="rejected"
+          />
+          <span>
+            Rejected
+          </span>
+        </p>
+      </div>
+    </div>
+    <div
+      className="column column-xs-3"
+      data-pg-collapsed={true}
+      data-pg-name="Column"
+    >
+      <div
+        className="card card-sm summary"
+      >
+        <i
+          className="fa bg-status-pending fa-info"
+        />
+        <p>
+          <small
+            id="investigating"
+          />
+          <span
+            title="Investigating"
+          >
+            Investigating
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</header>
+`;

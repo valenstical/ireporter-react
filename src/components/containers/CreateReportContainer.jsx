@@ -17,17 +17,32 @@ import reportIncident from '../../actions/reportAction';
  * @extends {Component}
  */
 class CreateReportContainer extends Component {
+  state ={
+    report: {
+      message: []
+    },
+  };
+
   handleSubmit = async (event) => {
     event.preventDefault();
     const payload = formDataJSON(new FormData(event.target));
     payload.location = `${payload.latitude},${payload.longitude}`;
     const { reportIncident: processReportIncident } = this.props;
     await processReportIncident(payload);
+    const { report } = this.props;
+    this.updateReport(report);
     scrollTop();
   }
 
+  updateReport = (report) => {
+    this.setState({
+      report
+    });
+  }
+
   render() {
-    const { user, report } = this.props;
+    const { user } = this.props;
+    const { report } = this.state;
     if (!user.isLoggedIn) return <Redirect to="/login" />;
     if (report.success) return <Redirect to="/dashboard" />;
     return (

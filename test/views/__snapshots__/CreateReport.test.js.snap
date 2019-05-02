@@ -183,17 +183,17 @@ exports[`<CreateReport> should render without crashing for failed report 1`] = `
           <p>
             Where did this happen? Enter the latitude/longitude. You can use
              
-            <Link
-              replace={false}
+            <a
+              href="https://maps.google.com"
+              rel="noopener noreferrer"
               target="_blank"
-              to="https://maps.google.com"
             >
               <strong>
                 <ins>
                   Google Map
                 </ins>
               </strong>
-            </Link>
+            </a>
              
             for help.
           </p>
@@ -448,17 +448,17 @@ exports[`<CreateReport> should render without crashing for intervention report 1
           <p>
             Where did this happen? Enter the latitude/longitude. You can use
              
-            <Link
-              replace={false}
+            <a
+              href="https://maps.google.com"
+              rel="noopener noreferrer"
               target="_blank"
-              to="https://maps.google.com"
             >
               <strong>
                 <ins>
                   Google Map
                 </ins>
               </strong>
-            </Link>
+            </a>
              
             for help.
           </p>
@@ -708,17 +708,17 @@ exports[`<CreateReport> should render without crashing for red-flag report 1`] =
           <p>
             Where did this happen? Enter the latitude/longitude. You can use
              
-            <Link
-              replace={false}
+            <a
+              href="https://maps.google.com"
+              rel="noopener noreferrer"
               target="_blank"
-              to="https://maps.google.com"
             >
               <strong>
                 <ins>
                   Google Map
                 </ins>
               </strong>
-            </Link>
+            </a>
              
             for help.
           </p>
@@ -977,17 +977,17 @@ exports[`<CreateReport> should render without crashing for successful report 1`]
           <p>
             Where did this happen? Enter the latitude/longitude. You can use
              
-            <Link
-              replace={false}
+            <a
+              href="https://maps.google.com"
+              rel="noopener noreferrer"
               target="_blank"
-              to="https://maps.google.com"
             >
               <strong>
                 <ins>
                   Google Map
                 </ins>
               </strong>
-            </Link>
+            </a>
              
             for help.
           </p>

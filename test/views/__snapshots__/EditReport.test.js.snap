@@ -2,7 +2,7 @@
 
 exports[`<EditReport> should render without crashing for empty data 1`] = `
 <main
-  className="login-wrapper top-space account-wrapper"
+  className="login-wrapper top-space account-wrapper "
 >
   <section
     className="heading"
@@ -261,12 +261,13 @@ exports[`<EditReport> should render without crashing for empty data 1`] = `
       </Link>
     </div>
   </div>
+  <Loader />
 </main>
 `;
 
 exports[`<EditReport> should render without crashing with data 1`] = `
 <main
-  className="login-wrapper top-space account-wrapper"
+  className="login-wrapper top-space account-wrapper busy"
 >
   <section
     className="heading"
@@ -418,7 +419,7 @@ exports[`<EditReport> should render without crashing with data 1`] = `
         />
       </div>
       <Button
-        isBusy={false}
+        isBusy={true}
         route="undefineds/undefined/comment"
         text="Save changes"
       />
@@ -508,7 +509,7 @@ exports[`<EditReport> should render without crashing with data 1`] = `
         </div>
       </div>
       <Button
-        isBusy={false}
+        isBusy={true}
         route="undefineds/undefined/location"
         text="Save changes"
       />
@@ -525,5 +526,6 @@ exports[`<EditReport> should render without crashing with data 1`] = `
       </Link>
     </div>
   </div>
+  <Loader />
 </main>
 `;

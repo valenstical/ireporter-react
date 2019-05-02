@@ -25,6 +25,11 @@ export const mockState = {
     success: false,
     redirect: false,
   },
+  reports: {
+    data: [],
+    isBusy: false,
+    success: false,
+  },
 };
 
 export const createMockStore = () => {

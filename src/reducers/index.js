@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import authReducer from './authReducer';
-import { createReportReducer, getReportReducer } from './reportsReducer';
+import { createReportReducer, getReportReducer, getReportsReducer } from './reportsReducer';
 
 
 /**
@@ -10,4 +10,5 @@ export default combineReducers({
   user: authReducer,
   createReport: createReportReducer,
   report: getReportReducer,
+  reports: getReportsReducer,
 });

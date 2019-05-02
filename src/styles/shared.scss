@@ -803,32 +803,34 @@ body .hidden {
 }
 
 section.tab-pane {
-    padding-top: 25px;
-    padding-bottom: 20px;
+    padding-top: 30px;
+    padding-bottom: 10px;
     text-align: center;
 }
 
-.tab-pane .tab a {
+.tab-pane .tab button {
     color: inherit;
     display: inline-block;
     padding: 20px 15px 18px;
     line-height: 0px;
     border-radius: 40px;
     font-size: 12px;
+    background: none;
+    border:none;
 }
 
-.tab-pane .tab a.active {
+.tab-pane .tab button.active {
     background-color: #ebf2ff;
     color: #009f8b;
 }
-
-.tab-pane .tab a.active:hover {
-    background-color: #eff2f9;
+.tab-pane .tab button:focus {
+    border: none;
+    outline: none;
 }
 
-@media (min-width:310px)
+@media (min-width:330px)
 {
-    .tab-pane .tab a {
+    .tab-pane .tab button {
         font-size: 15px;
     }
 }
@@ -842,9 +844,9 @@ section.tab-pane {
 
 @media (min-width:360px)
 {
-    .tab-pane .tab a {
-        padding-left: 20px;
-        padding-right: 20px;
+    .tab-pane .tab button {
+        padding-left: 15px;
+        padding-right: 15px;
         font-size: 16px;
     }
 }
@@ -855,7 +857,7 @@ section.tab-pane {
     right: 0px;
     top: 0px;
     bottom: 0px;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255, 255, 255, 0.98);
     text-align: center;
     padding-top: 120px;
     z-index: 100;

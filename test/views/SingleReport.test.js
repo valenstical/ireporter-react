@@ -4,14 +4,12 @@ import SingleReport from '../../src/components/views/SingleReport';
 
 const props = {
   handleUpdateStatus: jest.fn(),
-  details: {
-    data: [
-      {
-        status: 'draft',
-        Videos: [],
-        Images: [],
-      },
-    ]
+  report: {
+
+    status: 'draft',
+    Videos: [],
+    Images: [],
+
   }
 };
 
@@ -21,8 +19,8 @@ describe('<SingleReport>', () => {
     expect(wrapper).toMatchSnapshot();
   });
   it('should render without crashing with videos and images', () => {
-    props.details.data[0].Videos = [{}];
-    props.details.data[0].Images = [{}];
+    props.report.Videos = [{}];
+    props.report.Images = [{}];
 
     const wrapper = shallow(<SingleReport {...props} />);
     expect(wrapper).toMatchSnapshot();

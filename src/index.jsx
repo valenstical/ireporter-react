@@ -17,6 +17,7 @@ import EditReportContainer from './components/containers/EditReportContainer';
 import UserDashboardContainer from './components/containers/UserDashboardContainer';
 import AdminDashboardContainer from './components/containers/AdminDashboardContainer';
 import SingleReportContainer from './components/containers/SingleReportContainer';
+import Logout from './components/containers/Logout';
 
 const { store, persistor } = reduxStore;
 
@@ -38,6 +39,7 @@ function App() {
               <Route path="/profile" component={ProfileContainer} exact />
               <Route path="/dashboard" component={UserDashboardContainer} exact />
               <Route path="/admin" component={AdminDashboardContainer} exact />
+              <Route path="/logout" component={Logout} exact />
               <Route path="/create-report" component={CreateReportContainer} exact />
               <Route path="/edit-report/:type/:id" component={EditReportContainer} exact />
               <Route path="/reports/:type/:id" component={SingleReportContainer} exact />

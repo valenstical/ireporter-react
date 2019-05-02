@@ -475,6 +475,8 @@ button {
     top: 7px;
     margin-top: -4px;
     display: none;
+    background: none;
+    border: none;
 }
 
 .nav-profile-img {
@@ -621,12 +623,6 @@ button {
     padding: 30px 10px;
 }
 
-@media (min-width:600px)
-{
-    .top-space {
-        margin-top: 55px;
-    }
-}
 
 .toggle-menu {
     position: absolute;

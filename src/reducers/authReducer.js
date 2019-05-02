@@ -1,4 +1,4 @@
-import { authTypes } from '../actions/authAction';
+import { authTypes, logoutType } from '../actions/authAction';
 
 /**
  * A reducer that formats the data before updating the redux store with the new state
@@ -20,6 +20,13 @@ export default (state = {}, action) => {
     case authTypes.failure:
       return {
         ...state, isBusy: false, message: data, success: false
+      };
+    case logoutType.success:
+      return {
+        isBusy: false,
+        message: [],
+        success: false,
+        isLoggedIn: false,
       };
     default:
       return state;

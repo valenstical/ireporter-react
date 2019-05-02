@@ -30,10 +30,10 @@ class LoginContainer extends Component {
   render() {
     const { user } = this.props;
     if (user.isLoggedIn && !user.isAdmin) {
-      return <Redirect to="/dashboard" />
+      return <Redirect to="/dashboard" />;
     }
     if (user.isLoggedIn && user.isAdmin) {
-      return <Redirect to="/admin" />
+      return <Redirect to="/admin" />;
     }
     return (
       <Login

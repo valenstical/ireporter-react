@@ -4,7 +4,7 @@ import Header from '../../src/components/views/Header';
 
 describe('<Header>', () => {
   it('should render without crashing', () => {
-    const wrapper = shallow(<Header />);
+    const wrapper = shallow(<Header user={{}} />);
     expect(wrapper).toMatchSnapshot();
   });
 });

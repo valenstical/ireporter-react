@@ -12,7 +12,8 @@ export const mockState = {
   user: {
     isBusy: false,
     message: [],
-    success: false
+    success: false,
+    token: ''
   },
   createReport: {
     message: [],

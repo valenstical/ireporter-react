@@ -46,6 +46,7 @@ exports[`<LoginContainer> should render without crashing 1`] = `
               "isBusy": false,
               "message": Array [],
               "success": false,
+              "token": "",
             }
           }
         >
@@ -56,6 +57,7 @@ exports[`<LoginContainer> should render without crashing 1`] = `
                 "isBusy": false,
                 "message": Array [],
                 "success": false,
+                "token": "",
               }
             }
           >

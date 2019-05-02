@@ -8,12 +8,14 @@ export const createReportTypes = typeGenerator('CREATE_REPORT');
  * @param {object} payload An object containing the request parameters
  * @returns {object} The axios request promise object
  */
-const reportIncident = payload => async (dispatch) => {
+const reportIncident = payload => async (dispatch, getState) => {
   dispatch(action(createReportTypes.loading, true));
+  const { user: { token } } = getState();
   return request({
     route: `${payload.type}s`,
     method: 'post',
     payload,
+    token
   }).then((response) => {
     const { data } = response.data;
     const { message } = { ...data[0] };

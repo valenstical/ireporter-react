@@ -3,8 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { createStructuredSelector } from 'reselect';
 import { Redirect } from 'react-router-dom';
-import { getUser, getReport } from '../../selectors';
-import fetchReports from '../../actions/getReportAction';
+import { getUser, getReports } from '../../selectors';
 import SingleReport from '../views/SingleReport';
 import updateReport from '../../actions/updateReportAction';
 
@@ -20,23 +19,21 @@ class SingleReportContainer extends Component {
     refresh: false,
   }
 
-  async componentDidMount() {
-    const { location: { pathname } } = this.props;
+  componentDidMount() {
+    const { location: { pathname }, reports } = this.props;
     const pathAsArray = pathname.split('/');
-    const reportType = pathAsArray[2];
     const reportId = pathAsArray[3];
-    const { fetchReports: processfetchReports } = this.props;
-    if (reportType && reportId) await processfetchReports(`${reportType}/${reportId}`);
-    this.populateReport();
+    const report = reports.data.find(item => item.id.toString() === reportId.toString());
+    this.populateReport(report);
   }
 
   handleUpdateStatus = async (event) => {
     const status = event.target.value;
     const { updateReport: processUpdateReport } = this.props;
-    const { report: { data } } = this.state;
+    const { report } = this.state;
 
     const payload = {
-      route: `${data[0].type}s/${data[0].id}/status`,
+      route: `${report.type}s/${report.id}/status`,
       status
     };
     await processUpdateReport(payload);
@@ -45,8 +42,7 @@ class SingleReportContainer extends Component {
     });
   }
 
-  populateReport = () => {
-    const { report } = this.props;
+  populateReport = (report) => {
     this.setState({
       report
     });
@@ -56,13 +52,13 @@ class SingleReportContainer extends Component {
     const { user } = this.props;
     const { report, refresh } = this.state;
     if (!user.isLoggedIn) return <Redirect to="/login" />;
-    if (report.redirect) return <Redirect to="/404" />;
+    if (!report) return <Redirect to="/404" />;
     if (refresh) return <Redirect to="/login" />;
     return (
-      report.data
+      report.status
         ? (
           <SingleReport
-          details={report}
+          report={report}
           handleUpdateStatus={this.handleUpdateStatus}
           isAdmin={user.isAdmin}
           />
@@ -74,9 +70,8 @@ class SingleReportContainer extends Component {
 
 SingleReportContainer.propTypes = {
   user: PropTypes.object.isRequired,
-  report: PropTypes.object.isRequired,
+  reports: PropTypes.object.isRequired,
   location: PropTypes.object.isRequired,
-  fetchReports: PropTypes.func.isRequired,
   updateReport: PropTypes.func.isRequired,
 
 };
@@ -84,12 +79,11 @@ SingleReportContainer.propTypes = {
 const mapStateToProps = createStructuredSelector(
   {
     user: getUser,
-    report: getReport
+    reports: getReports
   }
 );
 
 const mapDispatchToProps = dispatch => ({
-  fetchReports: route => dispatch(fetchReports(route)),
   updateReport: payload => dispatch(updateReport(payload)),
 });
 

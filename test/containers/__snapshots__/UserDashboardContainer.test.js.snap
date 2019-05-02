@@ -61,6 +61,7 @@ exports[`<UserDashboardContainer> should render without crashing 1`] = `
               "isBusy": false,
               "message": Array [],
               "success": false,
+              "token": "",
             }
           }
         >
@@ -137,6 +138,7 @@ exports[`<UserDashboardContainer> should render without crashing when user is lo
               "isLoggedIn": true,
               "message": Array [],
               "success": false,
+              "token": "",
             }
           }
         >
@@ -346,6 +348,7 @@ exports[`<UserDashboardContainer> should render without crashing when with data 
               "isLoggedIn": true,
               "message": Array [],
               "success": false,
+              "token": "",
             }
           }
         >

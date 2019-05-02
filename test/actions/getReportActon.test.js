@@ -1,5 +1,5 @@
 import fetchReports, { getReportTypes, getReportsTypes } from '../../src/actions/getReportAction';
-import { createMockStore } from '../setup';
+import { createMockStore, mockState } from '../setup';
 import request from '../../src/utils/request';
 
 const mockStore = createMockStore();
@@ -20,7 +20,7 @@ describe('Get report action creators', () => {
     ];
     request.mockResolvedValue({ data: { data: [] } });
 
-    const store = mockStore();
+    const store = mockStore(mockState);
 
     return store.dispatch(fetchReports('')).then(() => {
       expect(store.getActions()).toEqual(expected);
@@ -39,7 +39,7 @@ describe('Get report action creators', () => {
     ];
     request.mockRejectedValue({ response: {} });
 
-    const store = mockStore();
+    const store = mockStore(mockState);
 
     return store.dispatch(fetchReports('')).then(() => {
       expect(store.getActions()).toEqual(expected);
@@ -58,7 +58,7 @@ describe('Get report action creators', () => {
     ];
     request.mockRejectedValue({});
 
-    const store = mockStore();
+    const store = mockStore(mockState);
 
     return store.dispatch(fetchReports('')).then(() => {
       expect(store.getActions()).toEqual(expected);
@@ -80,7 +80,7 @@ describe('Get reports action creators', () => {
     ];
     request.mockResolvedValue({ data: { data: [] } });
 
-    const store = mockStore();
+    const store = mockStore(mockState);
 
     return store.dispatch(fetchReports('', true, '')).then(() => {
       expect(store.getActions()).toEqual(expected);
@@ -99,7 +99,7 @@ describe('Get reports action creators', () => {
     ];
     request.mockRejectedValue({ response: {} });
 
-    const store = mockStore();
+    const store = mockStore(mockState);
 
     return store.dispatch(fetchReports('', true, 'red-flag')).then(() => {
       expect(store.getActions()).toEqual(expected);
@@ -118,7 +118,7 @@ describe('Get reports action creators', () => {
     ];
     request.mockRejectedValue({});
 
-    const store = mockStore();
+    const store = mockStore(mockState);
 
     return store.dispatch(fetchReports('', true, 'intervention')).then(() => {
       expect(store.getActions()).toEqual(expected);

@@ -38,7 +38,7 @@ export default function ReportCard({ report }) {
             <i className={`fa flag ${report.type === 'red-flag' ? 'fa-flag flag-red-flag' : 'fa-bullhorn flag-intervention'}`} title={report.type} />
           </h6>
           <p>{report.comment}</p>
-          <Link className="report-item-link" to={`/report/${report.type}s/${report.id}`}>
+          <Link className="report-item-link" to={`/reports/${report.type}s/${report.id}`}>
             Details
             {' '}
             &gt;&gt;

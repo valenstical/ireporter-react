@@ -16,6 +16,7 @@ import CreateReportContainer from './components/containers/CreateReportContainer
 import EditReportContainer from './components/containers/EditReportContainer';
 import UserDashboardContainer from './components/containers/UserDashboardContainer';
 import AdminDashboardContainer from './components/containers/AdminDashboardContainer';
+import SingleReportContainer from './components/containers/SingleReportContainer';
 
 const { store, persistor } = reduxStore;
 
@@ -39,6 +40,7 @@ function App() {
               <Route path="/admin" component={AdminDashboardContainer} exact />
               <Route path="/create-report" component={CreateReportContainer} exact />
               <Route path="/edit-report/:type/:id" component={EditReportContainer} exact />
+              <Route path="/reports/:type/:id" component={SingleReportContainer} exact />
               <Route path="*" component={Landing} />
             </Switch>
             <ToastContainer

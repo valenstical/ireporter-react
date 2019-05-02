@@ -1,0 +1,310 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SingleReport> should render without crashing 1`] = `
+<section
+  className="login-wrapper top-space account-wrapper"
+>
+  <section
+    className="heading"
+  >
+    <div
+      className="wrapper"
+    >
+      <div
+        className="bread"
+      >
+        <Link
+          replace={false}
+          to="/login"
+        >
+          Home
+        </Link>
+        <i
+          className="fa fa-angle-right"
+        />
+        <a
+          className="active"
+        />
+      </div>
+    </div>
+  </section>
+  <section>
+    <div
+      className="wrapper"
+    >
+      <header
+        className="page-title"
+      />
+      <div
+        className="reports-column"
+      >
+        <div
+          className="report-item card card-sm"
+        >
+          <div
+            className="profile-img"
+          >
+            <div
+              className="profile-img-reports"
+              style={
+                Object {
+                  "backgroundImage": "url(undefined)",
+                }
+              }
+            />
+          </div>
+          <div
+            className="report-item-content"
+          >
+            <h5 />
+            <span
+              className="report-item-date"
+            >
+              <i
+                className="fa fa-calendar"
+              />
+               
+              Invalid Date (NaN years ago)
+            </span>
+            <span
+              className="badge-citizen badge-status status-badge-draft"
+            >
+              <i
+                className="fa fa-file-text-o"
+              />
+              draft
+            </span>
+            <h6>
+              <i
+                className="fa flag fa-bullhorn flag-intervention"
+              />
+            </h6>
+            <p />
+            <iframe
+              allowFullScreen={true}
+              className="map"
+              src="https://maps.google.com/maps?q=undefined&output=embed&hl=en;z=20"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+`;
+
+exports[`<SingleReport> should render without crashing 2`] = `
+<section
+  className="login-wrapper top-space account-wrapper"
+>
+  <section
+    className="heading"
+  >
+    <div
+      className="wrapper"
+    >
+      <div
+        className="bread"
+      >
+        <Link
+          replace={false}
+          to="/login"
+        >
+          Home
+        </Link>
+        <i
+          className="fa fa-angle-right"
+        />
+        <a
+          className="active"
+        />
+      </div>
+    </div>
+  </section>
+  <section>
+    <div
+      className="wrapper"
+    >
+      <header
+        className="page-title"
+      />
+      <div
+        className="reports-column"
+      >
+        <div
+          className="report-item card card-sm"
+        >
+          <div
+            className="profile-img"
+          >
+            <div
+              className="profile-img-reports"
+              style={
+                Object {
+                  "backgroundImage": "url(undefined)",
+                }
+              }
+            />
+          </div>
+          <div
+            className="report-item-content"
+          >
+            <h5 />
+            <span
+              className="report-item-date"
+            >
+              <i
+                className="fa fa-calendar"
+              />
+               
+              Invalid Date (NaN years ago)
+            </span>
+            <span
+              className="badge-citizen badge-status status-badge-draft"
+            >
+              <i
+                className="fa fa-file-text-o"
+              />
+              draft
+            </span>
+            <h6>
+              <i
+                className="fa flag fa-bullhorn flag-intervention"
+              />
+            </h6>
+            <p />
+            <iframe
+              allowFullScreen={true}
+              className="map"
+              src="https://maps.google.com/maps?q=undefined&output=embed&hl=en;z=20"
+            />
+            <video
+              controls={true}
+              key="[object Object]"
+              preload="metadata"
+              src="undefined/[object Object]"
+              style={
+                Object {
+                  "height": 364,
+                }
+              }
+            />
+            <img
+              key="[object Object]"
+              src="undefined/[object Object]"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+`;
+
+exports[`<SingleReport> should render without crashing with videos and images 1`] = `
+<section
+  className="login-wrapper top-space account-wrapper"
+>
+  <section
+    className="heading"
+  >
+    <div
+      className="wrapper"
+    >
+      <div
+        className="bread"
+      >
+        <Link
+          replace={false}
+          to="/login"
+        >
+          Home
+        </Link>
+        <i
+          className="fa fa-angle-right"
+        />
+        <a
+          className="active"
+        />
+      </div>
+    </div>
+  </section>
+  <section>
+    <div
+      className="wrapper"
+    >
+      <header
+        className="page-title"
+      />
+      <div
+        className="reports-column"
+      >
+        <div
+          className="report-item card card-sm"
+        >
+          <div
+            className="profile-img"
+          >
+            <div
+              className="profile-img-reports"
+              style={
+                Object {
+                  "backgroundImage": "url(undefined)",
+                }
+              }
+            />
+          </div>
+          <div
+            className="report-item-content"
+          >
+            <h5 />
+            <span
+              className="report-item-date"
+            >
+              <i
+                className="fa fa-calendar"
+              />
+               
+              Invalid Date (NaN years ago)
+            </span>
+            <span
+              className="badge-citizen badge-status status-badge-draft"
+            >
+              <i
+                className="fa fa-file-text-o"
+              />
+              draft
+            </span>
+            <h6>
+              <i
+                className="fa flag fa-bullhorn flag-intervention"
+              />
+            </h6>
+            <p />
+            <iframe
+              allowFullScreen={true}
+              className="map"
+              src="https://maps.google.com/maps?q=undefined&output=embed&hl=en;z=20"
+            />
+            <video
+              controls={true}
+              key="[object Object]"
+              preload="metadata"
+              src="undefined/[object Object]"
+              style={
+                Object {
+                  "height": 364,
+                }
+              }
+            />
+            <img
+              key="[object Object]"
+              src="undefined/[object Object]"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+`;

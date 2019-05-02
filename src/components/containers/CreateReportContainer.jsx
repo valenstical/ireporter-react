@@ -26,6 +26,8 @@ class CreateReportContainer extends Component {
   handleSubmit = async (event) => {
     event.preventDefault();
     const payload = formDataJSON(new FormData(event.target));
+    payload.latitude = '6.2346676';
+    payload.longitude = '3.5454343';
     payload.location = `${payload.latitude},${payload.longitude}`;
     const { reportIncident: processReportIncident } = this.props;
     await processReportIncident(payload);

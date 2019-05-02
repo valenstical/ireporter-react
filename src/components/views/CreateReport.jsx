@@ -74,25 +74,13 @@ Intervention Case
             <header className="header-create">
               <h2 className="report-box-title">Location</h2>
               <p>
-Where did this happen? Enter the latitude/longitude. You can use
-                {' '}
-                <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer"><strong><ins>Google Map</ins></strong></a>
-                {' '}
-for help.
+Where did this happen? Enter the the complete location of the incident
               </p>
-              <p className="hidden">Where did this happen? Enter the latitude/longitude or simply use the marker to choose a location from the map</p>
             </header>
             <div className="row" data-pg-name="Row">
-              <div className="column-md-6 column column-xs-6" data-pg-name="column-md-6">
+              <div className="column" data-pg-name="column-md-6">
                 <div className="form-wrapper">
-                  <label htmlFor="latitude">Latitude</label>
-                  <input id="latitude" defaultValue={report.latitude} className="form-element" type="tel" name="latitude" required />
-                </div>
-              </div>
-              <div className="column-md-6 column column-xs-6" data-pg-name="column-md-6">
-                <div className="form-wrapper">
-                  <label htmlFor="longitude">Longitude</label>
-                  <input id="longitude" defaultValue={report.longitude} className="form-element" type="tel" name="longitude" required />
+                  <input id="location" defaultValue={report.state} className="form-element" type="text" name="state" required />
                 </div>
               </div>
             </div>

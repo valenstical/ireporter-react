@@ -63,7 +63,7 @@ export default function SingleReport({ report, handleUpdateStatus, isAdmin }) {
                   <i className={`fa flag ${report.type === 'red-flag' ? 'fa-flag flag-red-flag' : 'fa-bullhorn flag-intervention'}`} title={report.type} />
                 </h6>
                 <p>{report.comment}</p>
-                <iframe className="map" allowFullScreen src={`https://maps.google.com/maps?q=${report.location}&output=embed&hl=en;z=20`} title={report.location} />
+                <iframe className="map" allowFullScreen src={`https://maps.google.com/maps?q=${report.state}&output=embed&hl=en;z=20`} title={report.location} />
                 {report.Videos.map(video => <video src={`${process.env.ROOT}/${video}`} controls preload="metadata" style={{ height: 364 }} key={video} />)}
                 {report.Images.map(image => <img src={`${process.env.ROOT}/${image}`} alt={report.title} key={image} />)}
               </div>

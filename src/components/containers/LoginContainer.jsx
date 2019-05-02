@@ -29,7 +29,12 @@ class LoginContainer extends Component {
 
   render() {
     const { user } = this.props;
-    if (user.success || user.isLoggedIn) return <Redirect to="/dashboard" />;
+    if (user.isLoggedIn && !user.isAdmin) {
+      return <Redirect to="/dashboard" />
+    }
+    if (user.isLoggedIn && user.isAdmin) {
+      return <Redirect to="/admin" />
+    }
     return (
       <Login
       handleSubmit={this.handleLogin}

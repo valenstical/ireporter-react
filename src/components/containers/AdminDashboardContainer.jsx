@@ -5,33 +5,31 @@ import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import { getUser, getReports, getSummary } from '../../selectors';
 import fetchReports from '../../actions/getReportAction';
-
-import UserDashboard from '../views/UserDashboard';
+import AdminDashboard from '../views/AdminDashboard';
 
 /**
- * Container component for the UserDashboard view
+ * Container component for the AdminDashboard view
  * @export
- * @class UserDashboardContainer
+ * @class AdminDashboardContainer
  * @extends {Component}
  */
-class UserDashboardContainer extends Component {
+class AdminDashboardContainer extends Component {
   componentDidMount() {
     this.handleGetReports();
   }
 
-  handleGetReports = (event) => {
-    const type = event ? event.target.value : '';
+  handleGetReports = () => {
     const { fetchReports: processFetchReports } = this.props;
-    processFetchReports(`${type}s`, type);
+    processFetchReports();
   }
 
   render() {
     const { reports, summary, user } = this.props;
-    if (!user.isLoggedIn) return <Redirect to="/login" />;
+    if (!user.isLoggedIn || !user.isAdmin) return <Redirect to="/login" />;
     return (
       reports.data
         ? (
-          <UserDashboard
+          <AdminDashboard
           reports={reports}
           summary={summary}
           active={reports.active}
@@ -43,7 +41,7 @@ class UserDashboardContainer extends Component {
   }
 }
 
-UserDashboardContainer.propTypes = {
+AdminDashboardContainer.propTypes = {
   user: PropTypes.object.isRequired,
   reports: PropTypes.object.isRequired,
   summary: PropTypes.object.isRequired,
@@ -59,7 +57,7 @@ const mapStateToProps = createStructuredSelector(
 );
 
 const mapDispatchToProps = dispatch => ({
-  fetchReports: (route, type) => dispatch(fetchReports(route, true, type)),
+  fetchReports: () => dispatch(fetchReports('incidents/admin', true, 'incidents')),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(UserDashboardContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(AdminDashboardContainer);

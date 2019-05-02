@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AdminDashboardContainer> should render without crashing 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <BrowserRouter
+    keyLength={0}
+  >
+    <Router
+      history={
+        Object {
+          "action": "REPLACE",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/login",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Connect(AdminDashboardContainer)>
+        <AdminDashboardContainer
+          fetchReports={[Function]}
+          reports={
+            Object {
+              "data": Array [],
+              "isBusy": false,
+              "success": false,
+            }
+          }
+          summary={
+            Object {
+              "investigating": 0,
+              "pending": 0,
+              "rejected": 0,
+              "resolved": 0,
+            }
+          }
+          user={
+            Object {
+              "isBusy": false,
+              "message": Array [],
+              "success": false,
+            }
+          }
+        >
+          <Redirect
+            push={false}
+            to="/login"
+          />
+        </AdminDashboardContainer>
+      </Connect(AdminDashboardContainer)>
+    </Router>
+  </BrowserRouter>
+</Provider>
+`;

@@ -324,6 +324,7 @@ exports[`<UserDashboardContainer> should render without crashing when with data 
             Object {
               "data": Array [
                 Object {
+                  "id": 1,
                   "status": "draft",
                 },
               ],
@@ -355,6 +356,7 @@ exports[`<UserDashboardContainer> should render without crashing when with data 
               Object {
                 "data": Array [
                   Object {
+                    "id": 1,
                     "status": "draft",
                   },
                 ],
@@ -546,8 +548,10 @@ exports[`<UserDashboardContainer> should render without crashing when with data 
                       id="results"
                     >
                       <ReportCard
+                        key="1"
                         report={
                           Object {
+                            "id": 1,
                             "status": "draft",
                           }
                         }
@@ -600,11 +604,11 @@ exports[`<UserDashboardContainer> should render without crashing when with data 
                               <Link
                                 className="report-item-link"
                                 replace={false}
-                                to="/report/undefineds/undefined"
+                                to="/report/undefineds/1"
                               >
                                 <a
                                   className="report-item-link"
-                                  href="/report/undefineds/undefined"
+                                  href="/report/undefineds/1"
                                   onClick={[Function]}
                                 >
                                   Details
@@ -616,11 +620,11 @@ exports[`<UserDashboardContainer> should render without crashing when with data 
                               <Link
                                 className="btn-brand btn-secondary"
                                 replace={false}
-                                to="/edit-report/undefineds/undefined"
+                                to="/edit-report/undefineds/1"
                               >
                                 <a
                                   className="btn-brand btn-secondary"
-                                  href="/edit-report/undefineds/undefined"
+                                  href="/edit-report/undefineds/1"
                                   onClick={[Function]}
                                 >
                                   Edit

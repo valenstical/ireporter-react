@@ -5,9 +5,7 @@ import { ToastContainer, Flip } from 'react-toastify';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { PersistGate } from 'redux-persist/lib/integration/react';
 import reduxStore from './store';
-
 import './styles/index.scss';
-
 import HeaderContainer from './components/containers/HeaderContainer';
 import Footer from './components/views/Footer';
 import Landing from './components/views/Landing';
@@ -17,9 +15,9 @@ import ProfileContainer from './components/containers/ProfileContainer';
 import CreateReportContainer from './components/containers/CreateReportContainer';
 import EditReportContainer from './components/containers/EditReportContainer';
 import UserDashboardContainer from './components/containers/UserDashboardContainer';
+import AdminDashboardContainer from './components/containers/AdminDashboardContainer';
 
 const { store, persistor } = reduxStore;
-
 
 /**
  * The main entry point of the application
@@ -38,6 +36,7 @@ function App() {
               <Route path="/sign-up" component={SignupContainer} exact />
               <Route path="/profile" component={ProfileContainer} exact />
               <Route path="/dashboard" component={UserDashboardContainer} exact />
+              <Route path="/admin" component={AdminDashboardContainer} exact />
               <Route path="/create-report" component={CreateReportContainer} exact />
               <Route path="/edit-report/:type/:id" component={EditReportContainer} exact />
               <Route path="*" component={Landing} />

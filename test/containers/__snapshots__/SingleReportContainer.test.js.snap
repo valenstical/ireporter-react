@@ -39,16 +39,24 @@ exports[`<SingleReportContainer> should render without crashing 1`] = `
       }
     >
       <Connect(SingleReportContainer)
-        location={Object {}}
+        location={
+          Object {
+            "pathname": "a/b/45",
+            "reports": Object {},
+          }
+        }
       >
         <SingleReportContainer
-          fetchReports={[Function]}
-          location={Object {}}
-          report={
+          location={
+            Object {
+              "pathname": "a/b/45",
+              "reports": Object {},
+            }
+          }
+          reports={
             Object {
               "data": Array [],
               "isBusy": false,
-              "redirect": false,
               "success": false,
             }
           }
@@ -58,6 +66,7 @@ exports[`<SingleReportContainer> should render without crashing 1`] = `
               "isBusy": false,
               "message": Array [],
               "success": false,
+              "token": "",
             }
           }
         >

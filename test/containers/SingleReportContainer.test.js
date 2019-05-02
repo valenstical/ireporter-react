@@ -5,7 +5,10 @@ import SingleReportContainer from '../../src/components/containers/SingleReportC
 
 describe('<SingleReportContainer>', () => {
   it('should render without crashing', () => {
-    const wrapper = setup(<SingleReportContainer location={{}} />);
+    const wrapper = setup(<SingleReportContainer location={{
+      pathname: 'a/b/45',
+      reports: {}
+    }} />);
     expect(wrapper).toMatchSnapshot();
   });
 });

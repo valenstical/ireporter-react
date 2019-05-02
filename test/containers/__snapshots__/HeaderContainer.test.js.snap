@@ -38,96 +38,120 @@ exports[`<EditProfileContainer> should render without crashing 1`] = `
         }
       }
     >
-      <HeaderContainer>
-        <Header>
-          <nav
-            className="navigation"
+      <Connect(HeaderContainer)>
+        <HeaderContainer
+          dispatch={[Function]}
+          user={
+            Object {
+              "isBusy": false,
+              "message": Array [],
+              "success": false,
+              "token": "",
+            }
+          }
+        >
+          <Header
+            showMenu={false}
+            toggleMenu={[Function]}
+            user={
+              Object {
+                "isBusy": false,
+                "message": Array [],
+                "success": false,
+                "token": "",
+              }
+            }
           >
-            <div
-              className="wrapper"
+            <nav
+              className="navigation"
             >
               <div
-                className="clear-float"
+                className="wrapper"
               >
-                <Link
-                  className="nav-brand text-brand float-left"
-                  replace={false}
-                  to="/"
+                <div
+                  className="clear-float"
                 >
-                  <a
+                  <Link
                     className="nav-brand text-brand float-left"
-                    href="/"
-                    onClick={[Function]}
+                    replace={false}
+                    to="/"
                   >
-                    iReporter
-                  </a>
-                </Link>
-                <ul
-                  className="nav-section float-right nav-shown nav-hidden transition"
-                  id="nav-section"
-                >
-                  <li
-                    data-pg-name="Nav Item"
-                  >
-                    <Link
-                      replace={false}
-                      to="/"
+                    <a
+                      className="nav-brand text-brand float-left"
+                      href="/"
+                      onClick={[Function]}
                     >
-                      <a
-                        href="/"
-                        onClick={[Function]}
+                      iReporter
+                    </a>
+                  </Link>
+                  <ul
+                    className="nav-section float-right nav-shown nav-hidden transition"
+                    id="nav-section"
+                  >
+                    <li
+                      data-pg-name="Nav Item"
+                    >
+                      <Link
+                        replace={false}
+                        to="/"
                       >
-                        Home
-                      </a>
-                    </Link>
-                  </li>
-                  <li
-                    data-pg-name="Nav Item"
-                  >
-                    <Link
-                      replace={false}
-                      to="/login"
+                        <a
+                          href="/"
+                          onClick={[Function]}
+                        >
+                          Home
+                        </a>
+                      </Link>
+                    </li>
+                    <li
+                      data-pg-name="Nav Item"
                     >
-                      <a
-                        href="/login"
-                        onClick={[Function]}
+                      <Link
+                        replace={false}
+                        to="/login"
                       >
-                        Sign in
-                      </a>
-                    </Link>
-                  </li>
-                  <li
-                    className="btn-cta"
-                    data-pg-name="Nav Item"
-                  >
-                    <Link
-                      className="btn-brand transition"
-                      replace={false}
-                      to="/sign-up"
+                        <a
+                          href="/login"
+                          onClick={[Function]}
+                        >
+                          Sign in
+                        </a>
+                      </Link>
+                    </li>
+                    <li
+                      className="btn-cta"
+                      data-pg-name="Nav Item"
                     >
-                      <a
+                      <Link
                         className="btn-brand transition"
-                        href="/sign-up"
-                        onClick={[Function]}
+                        replace={false}
+                        to="/sign-up"
                       >
-                        Report a case
-                      </a>
-                    </Link>
-                  </li>
-                </ul>
-                <button
-                  className="menu-bar"
-                  type="button"
-                >
-                  <i
-                    className="fa fa-align-justify"
-                  />
-                </button>
+                        <a
+                          className="btn-brand transition"
+                          href="/sign-up"
+                          onClick={[Function]}
+                        >
+                          Report a case
+                        </a>
+                      </Link>
+                    </li>
+                  </ul>
+                  <button
+                    className="menu-bar"
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    <i
+                      className="fa fa-align-justify"
+                    />
+                  </button>
+                </div>
               </div>
-            </div>
-          </nav>
-        </Header>
-      </HeaderContainer>
+            </nav>
+          </Header>
+        </HeaderContainer>
+      </Connect(HeaderContainer)>
     </Router>
   </BrowserRouter>
 </Provider>

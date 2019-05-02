@@ -53,6 +53,7 @@ exports[`<CreateReportContainer> should render without crashing 1`] = `
               "isBusy": false,
               "message": Array [],
               "success": false,
+              "token": "",
             }
           }
         >

@@ -10,13 +10,15 @@ export const getReportsTypes = typeGenerator('GET_REPORTS');
  * @param {string} route The route to fetch results from
  * @returns {object} The axios request promise object
  */
-const fetchReports = (route, all = false, type = null) => async (dispatch) => {
+const fetchReports = (route, all = false, type = null) => async (dispatch, getState) => {
   const actionType = all ? getReportsTypes : getReportTypes;
   const path = type === '' ? 'incidents' : route;
+  const { user: { token } } = getState();
   dispatch(action(actionType.loading, type));
   return request({
     route: path,
     method: 'get',
+    token,
   }).then((response) => {
     const { data } = response.data;
     dispatch(action(actionType.success, data));

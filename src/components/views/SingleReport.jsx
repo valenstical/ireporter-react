@@ -16,9 +16,7 @@ const getStatus = {
  * The single report component
  * @returns {object} The generated JSX object
  */
-export default function SingleReport({ details, handleUpdateStatus, isAdmin }) {
-  const { data } = details;
-  const report = data[0];
+export default function SingleReport({ report, handleUpdateStatus, isAdmin }) {
   const status = getStatus[report.status];
   return (
     <section className="login-wrapper top-space account-wrapper">
@@ -81,9 +79,9 @@ export default function SingleReport({ details, handleUpdateStatus, isAdmin }) {
 }
 
 SingleReport.propTypes = {
-  details: PropTypes.object.isRequired,
+  report: PropTypes.object.isRequired,
   handleUpdateStatus: PropTypes.func.isRequired,
-  isAdmin: PropTypes.func
+  isAdmin: PropTypes.bool
 };
 
 SingleReport.defaultProps = {

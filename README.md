@@ -21,6 +21,8 @@ Simple web app that lets citizens report cases of corruption to the appropriate 
 - Travis CI
 - Code Climate
 - Coveralls
+- React
+- Redux
 
 ## Requirements and Installation
 Install Node Js and Git

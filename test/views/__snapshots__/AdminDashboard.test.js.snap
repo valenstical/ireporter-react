@@ -1,0 +1,159 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AdminDashboard> should render without crashing 1`] = `
+<main
+  className="login-wrapper top-space account-wrapper relative bg-grey undefined"
+>
+  <section
+    className="heading"
+  >
+    <div
+      className="wrapper"
+    >
+      <div>
+        <Link
+          replace={false}
+          to="#"
+        >
+          Reports (
+          1
+          )
+        </Link>
+      </div>
+    </div>
+  </section>
+  <section
+    className="profile-page fill-viewport"
+  >
+    <div
+      className="wrapper"
+    >
+      <SummaryBox
+        summary={Object {}}
+      />
+      <div
+        className="card card-sm table-overflow"
+      >
+        <div
+          className="table-wrapper"
+        >
+          <table
+            className="table table-striped"
+          >
+            <thead>
+              <tr>
+                <th>
+                  Date
+                </th>
+                <th>
+                  Report
+                </th>
+                <th>
+                  User
+                </th>
+                <th
+                  className="text-center"
+                >
+                  Status
+                </th>
+              </tr>
+            </thead>
+            <tbody
+              id="reportsBody"
+            >
+              <TableRow
+                key="1"
+                report={
+                  Object {
+                    "id": 1,
+                  }
+                }
+              />
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+  <Loader />
+</main>
+`;
+
+exports[`<AdminDashboard> should render without crashing when busy 1`] = `
+<main
+  className="login-wrapper top-space account-wrapper relative bg-grey busy"
+>
+  <section
+    className="heading"
+  >
+    <div
+      className="wrapper"
+    >
+      <div>
+        <Link
+          replace={false}
+          to="#"
+        >
+          Reports (
+          1
+          )
+        </Link>
+      </div>
+    </div>
+  </section>
+  <section
+    className="profile-page fill-viewport"
+  >
+    <div
+      className="wrapper"
+    >
+      <SummaryBox
+        summary={Object {}}
+      />
+      <div
+        className="card card-sm table-overflow"
+      >
+        <div
+          className="table-wrapper"
+        >
+          <table
+            className="table table-striped"
+          >
+            <thead>
+              <tr>
+                <th>
+                  Date
+                </th>
+                <th>
+                  Report
+                </th>
+                <th>
+                  User
+                </th>
+                <th
+                  className="text-center"
+                >
+                  Status
+                </th>
+              </tr>
+            </thead>
+            <tbody
+              id="reportsBody"
+            >
+              <TableRow
+                key="1"
+                report={
+                  Object {
+                    "id": 1,
+                  }
+                }
+              />
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+  <Loader />
+</main>
+`;

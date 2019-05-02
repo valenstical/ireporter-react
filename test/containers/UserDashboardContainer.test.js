@@ -15,7 +15,8 @@ describe('<UserDashboardContainer>', () => {
   });
   it('should render without crashing when with data', () => {
     mockState.reports.data = [{
-      status: 'draft'
+      status: 'draft',
+      id: 1
     }];
     const wrapper = setup(<UserDashboardContainer />, mockState);
     expect(wrapper).toMatchSnapshot();

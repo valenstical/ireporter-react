@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TableRow> should render without crashing 1`] = `
+<tr>
+  <td
+    className="td-small"
+    title="Invalid Date"
+  >
+    Invalid Date
+    <br />
+    <small>
+      (
+      NaN years ago
+      )
+    </small>
+  </td>
+  <td>
+    <i
+      className="fa flag fa-flag flag-red-flag"
+      title="red-flag"
+    />
+    <Link
+      replace={false}
+      to="/reports/red-flags/undefined"
+    >
+      <ins />
+    </Link>
+  </td>
+  <td
+    className="relative"
+  >
+    <div
+      className="profile-img"
+    >
+      <div
+        className="profile-img-reports"
+        style={
+          Object {
+            "backgroundImage": "url(undefined)",
+          }
+        }
+      />
+    </div>
+     
+    <span
+      className="profile-name text-capitalize"
+    />
+  </td>
+  <td
+    className="text-center"
+  >
+    <span
+      className="badge-citizen badge-status status-badge-draft"
+    >
+      <i
+        className="fa fa-file-text-o"
+      />
+      draft
+    </span>
+  </td>
+</tr>
+`;
+
+exports[`<TableRow> should render without crashing for intervention reports 1`] = `
+<tr>
+  <td
+    className="td-small"
+    title="Invalid Date"
+  >
+    Invalid Date
+    <br />
+    <small>
+      (
+      NaN years ago
+      )
+    </small>
+  </td>
+  <td>
+    <i
+      className="fa flag fa-bullhorn flag-intervention"
+      title="intervention"
+    />
+    <Link
+      replace={false}
+      to="/reports/interventions/undefined"
+    >
+      <ins />
+    </Link>
+  </td>
+  <td
+    className="relative"
+  >
+    <div
+      className="profile-img"
+    >
+      <div
+        className="profile-img-reports"
+        style={
+          Object {
+            "backgroundImage": "url(undefined)",
+          }
+        }
+      />
+    </div>
+     
+    <span
+      className="profile-name text-capitalize"
+    />
+  </td>
+  <td
+    className="text-center"
+  >
+    <span
+      className="badge-citizen badge-status status-badge-draft"
+    >
+      <i
+        className="fa fa-file-text-o"
+      />
+      draft
+    </span>
+  </td>
+</tr>
+`;

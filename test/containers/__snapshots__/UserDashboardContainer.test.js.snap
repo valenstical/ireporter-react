@@ -604,11 +604,11 @@ exports[`<UserDashboardContainer> should render without crashing when with data 
                               <Link
                                 className="report-item-link"
                                 replace={false}
-                                to="/report/undefineds/1"
+                                to="/reports/undefineds/1"
                               >
                                 <a
                                   className="report-item-link"
-                                  href="/report/undefineds/1"
+                                  href="/reports/undefineds/1"
                                   onClick={[Function]}
                                 >
                                   Details
